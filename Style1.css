@@ -1,0 +1,27 @@
+*{
+	
+	margin: 0;
+    box-sizing: border-box;
+}
+
+.left{
+background-color: pink;
+float: left;
+width: 60%;
+padding: 40px;
+word-spacing: 20;
+}
+
+.right{
+background-color: skyblue;
+float: right;
+width: 40%;
+padding: 40px;
+}
+
+.buttom{
+padding: 50px;
+background-color: lightgreen;
+float: left;
+width: 100%;
+}
