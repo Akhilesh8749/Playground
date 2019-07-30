@@ -1,7 +1,17 @@
-.main{
-  margin: auto;
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
 }
 
+body{
+  background-color: #F6F8F9;
+}
+
+.main{
+  padding: 3px;
+  padding-bottom: 15px;
+}
 
 .leftflex{
   display: flex;
@@ -11,8 +21,8 @@
   align-items: center;
   background-color:#FFFFFF;
   height: 40px;
+ 
 }
-
 
 .rightflex{
   display: flex;
@@ -23,37 +33,33 @@
   height: 40px;
 }
 
-
 img{
   border-radius: 50%;
 }
 
-
-
 .flexsecond{
   display: flex;
-  justify-content:space-around;
+  justify-content:space-between;
   flex-direction:row;
   align-items: center;
   background-color:#FFFFFF;
-  width: 95%;
+  width: 96%;
   margin:auto;
   height: 100px;
+  border: 1px solid gainsboro;
 }
 
-
-
-input[type="search"]{
-  border-radius: 20px;
-  padding: 6px;
-  border-color: #B5B5B5;
+.main-mar{
+  width: 96%;
+  margin:auto;
+  background-color: #FFFFFF;
+  border: 1px solid gainsboro;
 }
-
 
 .text{
-  margin-left: 10px;
   font-size: 20px;
   border-bottom: 2px solid #32BDD2;
+  margin-left: 30px;
 }
 
 button {
@@ -65,4 +71,70 @@ button {
   cursor: pointer;
   border-radius: 20px;
   float: right;
+  margin-right: 30px;
+}
+
+.filflex{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  margin-left: 30px;
+  height: 60px;
+}
+
+.status-flex{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  height: 90px;
+  justify-content: space-between; 
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.column1{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.circle {
+  height: 12px;
+  width: 12px;
+  background-color:#24D081;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.Show-me{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:center;
+  height: 30px;
+  background-color:#FFFFFF;
+}
+
+.text-right{
+margin-right: 30px;
+}
+
+#search-text{
+  border-radius: 20px;
+  float:left;
+   
+  outline:0;
+  padding: 5px;
+}
+
+#search{
+  margin-top:3px;
+  cursor:pointer;
+  float:left;
+  height:20px;
+  text-align:center;
+  width:20px;
 }
