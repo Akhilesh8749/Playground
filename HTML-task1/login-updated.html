@@ -1,39 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <title>Login Page</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="login-updated.css">
 </head>
 
-<body bgcolor="#F6F8F9">
-
-  <div class="f">
-
+<body>
+  <div class="first">
     <form>
       <div class="container">
-        <h2>Login</h2>
+        <h2><u>LOGIN</u></h2>
         <span><b>Username</b></span>
         <div>
-          <input type="text" placeholder="Enter Username" name="uname" required><br>
+          <input type="text" placeholder="Enter Username" name="uname" required>
         </div>
-
         <span><b>Password</b></span>
         <div>
-          <input type="password" placeholder="Enter Password" name="psw" required><br>
+          <input type="password" placeholder="Enter Password" name="psw" required>
         </div>
-
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span class="psw"><a href="#">Forgot password?</a></span>
-        <br><br>
 
         <div>
-          <button type="submit">Login</button><br>
+          <label class="rem-me">
+            <input type="checkbox" checked="checked" name="remember">
+            <span>Remember me</span>
+          </label>
+          <span class="psw"><a href="#">Forgot password?</a></span>
+          <div>
+            <button type="submit">Login</button><br>
+          </div>
         </div>
-      </div>
     </form>
   </div>
 </body>

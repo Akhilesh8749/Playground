@@ -1,12 +1,25 @@
-body {font-family: Arial, Helvetica, sans-serif;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #F6F8F9;
+}
 
-
+.first{
+  margin:auto;
+  width: 40%;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  padding: 1%;
+  background: #F6F8F9;
+}
 
 .container {
+  margin:auto;
   background-color: white;
-  margin: auto;
-  padding: 5%;
-  width: 100%;
+  width: 95%;
+  font-family: 'Roboto';
+  border-radius: 10px;
+  box-shadow: 2px 2px #F3F6A9;
 }
 
 
@@ -30,14 +43,13 @@ button {
 button:hover {
   opacity: 0.8;
 }
+span.rem-me {
+  float: left;
+}
 
 span.psw {
   float: right;
 }
 
 
-.f{
-position: absolute;
-  top: 25%;
-  left: 40%;
-}
+
