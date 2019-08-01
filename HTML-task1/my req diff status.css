@@ -1,0 +1,237 @@
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body{
+    margin:auto;
+    background-color: #F6F8F9;
+    box-shadow: 1px 1px 1px 2px #D8D3D3;
+}
+
+
+
+.head-flex{
+    padding-top:10px;
+    padding-bottom: 10px;
+    background-color:#FFFFFF;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 1px 1px #D8D3D3;
+}
+
+.left-top-flex{
+    display: flex;
+    float: left;
+    justify-content:center;
+    flex-direction:row;
+    align-items: center;
+    width: 5%;
+    padding-left: 25px;
+}
+  
+.right-top-flex{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:flex-end;
+    width: 95%;
+    padding-right: 32px;
+}
+
+.right-top-flex-data{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:center;   
+}
+
+.right-top-flex-data-img{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:center;
+    width: 30%;
+    padding: 2px;  
+}
+
+.right-top-flex-data-txt{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    width: 60%;  
+    padding: 2px; 
+}
+
+.right-top-flex-data-last-img{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    padding: 2px;
+}
+
+#image{
+    border-radius: 50%;
+}
+
+
+
+
+
+.myreq{
+    display: flex;
+    justify-content:space-between;
+    flex-direction:row;
+    align-items: center;
+    background-color:#FFFFFF;
+    width: 95%;
+    margin:auto;
+    border: 1px solid gainsboro;
+    padding-top:18px;
+    padding-bottom: 24px;
+    box-shadow: 1px 1px 1px 2px #D8D3D3;
+}
+   
+.myreq-text{
+    font-size: 20px;
+    border-bottom: 2px solid #32BDD2;
+    padding: 3px;
+    margin-left: 30px;
+}
+  
+.myreq-search{
+    position: relative;
+}
+  
+.myreq-search input{
+    border-style: ridge;
+    border-radius: 20px;
+    display: block;
+    box-sizing: border-box;
+    width: 800px;
+    height: 35px;
+}
+  
+.myreq-search img{
+  position: absolute;
+  float: right;
+  right: 20px;
+  top:4px;
+}
+  
+button {
+    background-color: #32BDD2;
+    color: white;
+    padding: 10px 16px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    float: right;
+    margin-right: 30px;
+}
+
+
+
+
+.filter-main-flex{
+    width: 95%;
+    margin:auto;
+    background-color: #FFFFFF;
+    border: 1px solid #F6E2E2;
+    box-shadow: 1px 1px 1px 2px #D8D3D3;   
+}
+
+.filter-main-sub-flex{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    margin-left: 30px;
+    padding-top: 12px;
+    padding-bottom: 14px;
+}
+
+.filter-main-flex-data{
+    display: flex;
+    flex-direction: column;
+}
+
+#filter-main-flex-data-style{
+    font-size: 12px; 
+    padding-top:3px;
+    font-weight: bold;
+}
+
+
+
+
+
+.status-flex{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    padding-top:22px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #FFF8F8;
+}
+
+.status-flex-data{
+    display: flex;
+    flex-direction:column;
+    width: 40%;
+    margin-left: 30px;
+}
+
+.status-flex-img{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:center;
+    width: 20%;
+}
+  
+.status-flex-last{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 40%;
+    margin-right: 25px;
+    
+}
+
+.status-flex-last-both{
+    display: flex;
+    flex-direction:row;
+}
+.status-flex-last-text{
+    display: flex;
+    flex-direction:row;
+    margin-right: 10px;
+}
+ 
+.status-flex-last-circle{
+    display: flex;
+    flex-direction:row;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+
+.show-more-flex{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:center;
+    background-color:#FFFFFF;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    
+}
