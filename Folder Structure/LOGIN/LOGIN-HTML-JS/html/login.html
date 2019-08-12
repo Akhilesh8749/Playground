@@ -16,13 +16,16 @@
 
       if (em == "CARMEL@GMAIL.COM" && pw == "CARMEL") {
         alert("Thank You for Login...!   Login successfully");
+        console.info("Login Successfully");
+
       }
       else {
         alert(" Please enter the valid username and password..!");
+        console.warn("This is a warning! Enter valid username and Password or Register");
       }
     }
-
-
+    
+    
   </script>
 
 </head>
@@ -36,7 +39,7 @@
       <div class="container">
 
         <div class="login-text">
-          <span id="main-text">login</span>
+          <span id="main-text" title="Click Here">login</span>
         </div>
 
         <script>
@@ -45,23 +48,23 @@
 
           function firstFunction() {
             alert("Welcome");
+            console.info("you clicked the Login Text...!");
           }
         </script>
+
 
 
         <div class="email-password">
           <div id="email-password-text">
             <p id="username"><b>Email or Username</b></p>
-            <input type="email" name="uname" id="email" required>
-            <p id="display1"></p>
+            <input type="email" name="uname" id="email" title="Enter the Valid Email" required>
           </div>
 
 
 
           <div id="email-password-text">
             <p id="pswd"><b>Password</b></p>
-            <input type="password" placeholder="* * * * * * * *" name="password" id="password" required>
-            <p id="display2"></p>
+            <input type="password" placeholder="* * * * * * * *" name="password" id="password" title="Password must contain number and special character" required>
           </div>
 
           <script>
@@ -69,17 +72,33 @@
             second.addEventListener("mouseover", secondFunction);
 
             function secondFunction() {
-              document.getElementById("display1").innerHTML = "Enter the Valid Email...!";
+              alert("Enter the Valid Email...!");
+              console.info("you clicked the Email Text...!");
             }
 
+            var txt1 = document.getElementById("email");
+            txt1.addEventListener("click", txtInputBoxOne);
+            
+            function txtInputBoxOne(){ 
+              alert("Enter valid Mail...! Ex: carmel@gmail.com");
+              console.info("you clicked the Email Box...!");
+            }
 
             var third = document.getElementById("pswd");
             third.addEventListener("mouseover", thirdFunction);
 
             function thirdFunction() {
-              document.getElementById("display2").innerHTML = "Password must have number and special character";
+              alert("Password must have number and special character");
+              console.info("you clicked the Password Text...!");
             }
 
+            var txt2 = document.getElementById("password");
+            txt2.addEventListener("click", txtInputBoxTwo);
+            
+            function txtInputBoxTwo(){ 
+              alert("Password must have number and special character...! Ex: Carmel@123");
+              console.info("you clicked the Password Box...!");
+            }
 
           </script>
         </div>
@@ -88,11 +107,11 @@
         <div class="rem-me">
           <div id="checkbox-text">
             <input type="checkbox" name="remember">
-            <span id="rem">Remember me</span>
+            <span id="rem" title="Select the checkbox">Remember me</span>
 
           </div>
           <div id="forgot">
-            <span class="psw" id="frpw"><a href="#">Forgot password?</a></span>
+            <span class="psw" id="frpw"><a href="#" title="Set new password">Forgot password?</a></span>
             <p id="display3"></p>
           </div>
 
@@ -104,18 +123,20 @@
             fourth.addEventListener("click", fourthFunction);
             function fourthFunction() {
               alert("REMEMBER ME");
+              console.info("you clicked the Remember Text...!");
             }
 
             var fifth = document.getElementById("frpw");
             fifth.addEventListener("mouseover", fifthFunction);
             function fifthFunction() {
               document.getElementById("display3").innerHTML = "Don't click here";
+              console.info("you clicked the Forgot Password...!");
             }
             
           </script>
         </div>
 
-        <button type="submit" onclick="login()">Login</button>
+        <button type="submit" id="btn" onclick="login()" title="Click Login button !">Login</button>
       </div>
 
     </form>
