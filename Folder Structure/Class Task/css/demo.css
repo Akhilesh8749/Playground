@@ -9,7 +9,6 @@ body{
     background-color: #F6F8F9;
     box-shadow: 1px 1px 1px 2px #D8D3D3;
     font-family: "Roboto";
-
 }
 
 
@@ -19,7 +18,6 @@ body{
     padding-bottom: 10px;
     background-color:#FFFFFF;
     box-shadow: 1px 1px 1px 1px #D8D3D3;
-
 }
 
 .left-top-flex{
@@ -30,7 +28,6 @@ body{
     align-items: center;
     width: 5%;
     padding-left: 25px;
-
 }
   
 .right-top-flex{
@@ -40,7 +37,6 @@ body{
     justify-content:flex-end;
     width: 95%;
     padding-right: 32px;
-
 }
 
 .right-top-flex-data{
@@ -48,7 +44,6 @@ body{
     flex-direction:row;
     align-items: center;
     justify-content:center;  
-
     width: 10%; 
 }
 
@@ -65,9 +60,9 @@ body{
     align-items: center;
     justify-content: flex-start;
     background: #d1cfcf;
-
     padding-top: 1%;
     padding-bottom: 1%;
+    padding-left: 1.5%;
 }
 
 
@@ -77,8 +72,8 @@ body{
     display: flex;
     flex-direction:column;
     justify-content: flex-start;
-
     padding-top: 2%;
+    padding-left: 3%;
 }
 
 .personal-title{
@@ -103,20 +98,18 @@ body{
 
 .plan-main{
     padding-top: 2%;
-
+    padding-left: 3%;
 }
 
 .plan-name{
     display: flex;
     flex-direction:row;
     justify-content: space-between;
- 
     width: 30%;
 }
 
 #program{
 color: blueviolet;
-border-bottom: 2px solid blueviolet;
 padding-bottom: 2px;
 }
 
@@ -132,4 +125,63 @@ padding-right: 20px;
 
 .add-img img{
     margin-left: 2%;
+}
+
+
+.detailed-text{
+    display: flex;
+    flex-direction:column;
+    padding-bottom: 1.5%;
+}
+
+
+.first-intro{
+    display: flex;
+    flex-direction:row;
+    align-items: center;   
+}
+
+.circle{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 3%;
+    border:1px solid black;
+}
+
+#intro-text{
+    font-weight: bold;
+    margin-left: 3%;
+}
+
+
+
+.craete-title{
+    
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.craete-title-sub{
+    background: rgb(117, 145, 219);
+}
+.create-text-left{
+    width: 50%;
+    float: left;
+    padding-left: 3%
+}
+
+#create-text-left-span{
+    padding-left: 7%;
+    font-weight: bold;
+}
+.create-text-right{
+    width: 50%;
+    float: right;
+}
+
+.create-text-right-sub{
+    width: 30%;
+    float: right;
 }
