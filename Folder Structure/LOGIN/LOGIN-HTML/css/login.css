@@ -9,96 +9,93 @@ body {
   background: #F6F8F9;
 }
 
-
 .first{
   margin:auto;
-  width: 40%;
-  position: absolute;
-  top: 20%;
-  left: 30%;
-  padding:20px;
-  background: #F6F8F9;
-  border:1px solid #e6e5e5;
+  width: 96%;
+  margin-top:2%;
+  margin-bottom:2%;
+  background: #FFFFFF;
+  box-shadow: 1px 1px #f1f0f0;
+  border-radius: 10px;
 }
-
 
 .container {
   margin:auto;
   background-color: white;
-  width: 95%;
+  width: 40%;
   background: #FFFFFF;
-  border-radius: 10px;
-  box-shadow: 2px 2px #F3F6A9;
-  border:1px solid #e6e5e5;
 }
  
 .login-text{
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 .login-text span{
-  position: relative;
-  left: 5px;
   border-bottom: 3px solid #707070;
   padding-bottom: 2px;
   color:#595959;
   text-transform:uppercase;
-  font-size: 16px;
+  font-size: 1.17vw;
   font-weight: bold;
 }
 
-
-
 .email-password{
   color:#505050;
-  font-size: 12px;
+  font-size: 00.87vw;
 }
 
 #email-password-text{
-  position: relative;
-  left: 5px;
-  padding-top: 40px;
-  padding-bottom: 10px;
+  padding-top: 10%;
+  padding-bottom: 2%;
 }
 
-
 input[type=text], input[type=password] {
-  width: 80%;
+  width: 90%;
   padding: 8px 20px;
   margin: 8px 0;
   border: 1px solid #ccc;
+  border-radius: 8px;
+  position: relative;
 }
 
-
 .rem-me {
+  padding-bottom: 12%;
+  font-size: 0.73vw;
+  color: #707070;
 }
 
 #checkbox-text{
-  position: relative;
-  left: 5px;
   float: left;
+}
+
+#remember{
+  padding-left: 5px; 
 }
 #forgot{
   float: right;
 }
 
+.psw a{
+  text-decoration: none;
+  color: #707070;
+  border-bottom: 1px solid #868686;
+  padding-bottom: 2px;
+  position: absolute;
+  right: 35%;
+}
 
 button {
   background-color: #32BDD2;
   color: white;
-  padding: 8px 20px;
+  padding: 15px 30px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  border-radius: 20px;
-  position: relative;
-  left: 5px;
+  border-radius: 25px;
+  font-size: 00.87vw;
 }
 
 button:hover {
   opacity: 0.8;
 }
-
-
-

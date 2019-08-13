@@ -4,6 +4,7 @@
 <head>
   <title>Login Page</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../css/login.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
@@ -13,7 +14,7 @@
   <div class="first">
 
     <form>
-
+        <div style="min-height: 12vh"></div>
       <div class="container">
 
         <div class="login-text">
@@ -24,12 +25,12 @@
         <div class="email-password">
           <div id="email-password-text">
             <p><b>Email or Username</b></p>
-            <input type="text" name="uname" required>
+            <input type="text" name="uname" title="Enter Valid Email or Username" required>
           </div>
 
           <div id="email-password-text">
             <p><b>Password</b></p>
-            <input type="password" placeholder="* * * * * * * *" name="psw" required>
+            <input type="password" placeholder="* * * * * * * *" name="psw"  title="Enter the Password"required>
           </div>
         </div>
 
@@ -37,18 +38,24 @@
         <div class="rem-me">
           <div id="checkbox-text">
             <input type="checkbox" name="remember">
-            <span>Remember me</span>
+            <span id="remember">Remember me</span>
           </div>
           <div id="forgot">
-            <span class="psw"><a href="#">Forgot password?</a></span>
+            <span class="psw"><a href="#">Forgot password</a></span>
           </div>
 
           <div style="clear: both"></div>
 
         </div>
 
-        <button type="submit">Login</button>
+        <button type="submit" onclick="sumbitFunction()" title="Click">LOGIN</button>
+        <script>
+        function sumbitFunction(){
+          document.location="";
+        }
+        </script>
       </div>
+      <div style="min-height: 12vh"></div>
 
     </form>
   </div>
