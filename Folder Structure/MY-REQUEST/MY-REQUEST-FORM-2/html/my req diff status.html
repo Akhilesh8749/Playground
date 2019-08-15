@@ -4,6 +4,7 @@
 <head>
     <title>My Request</title>
     <link rel="stylesheet" type="text/css" href="../css/my req diff status.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 
 <body>
@@ -26,40 +27,64 @@
 
     <div class="myreq">
 
-        <span class="myreq-text"> My Request</span>
+        <span class="myreq-text">My Request</span>
         <div class="myreq-search">
             <input type="text" size="40" placeholder="         Search">
             <img src='../images/ser.png' width="25" height="25">
         </div>
-        <button>NEW REQUEST</button>
-    </div>
+        <div class="btn">
+            <button onclick="goTORequisition()">NEW REQUEST</button>
+        </div>
 
+        <script>
+        function goTORequisition()
+        {
+            document.location="../../../REQUISITION/REQUISITION FORM 1/html/requisition.html";
+        }
+        </script>
+    </div>
 
 
     <div class="filter-main-flex">
         <div class="filter-main-sub-flex">
-            <div>
-                <img src="../images/fil.png" width="35" height="35">
-            </div>
+
+            <ul>
+                <li class="dropdown">
+                    <a href="javascript:void(0)"><img src="../images/fil.png" onclick="myFunction()" class="dropbtn"
+                            alt="Image not Found" width="25" height="25"></a>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">CLEAR</a>
+                        <a href="#">APPROVED</a>
+                        <a href="#">DRAFT</a>
+                        <a href="#">AWAITING</a>
+                        <a href="#">REJECTED</a>
+                    </div>
+                </li>
+            </ul>
+
+
 
             <div class="filter-main-flex-data">
-                <span>FILTER</span>
+                <span id="">FILTER</span>
                 <span id="filter-main-flex-data-style">you have not applied any filter.</span>
             </div>
 
         </div>
 
 
-        <div class="status-flex">
+
+        <div class="status-flex" onclick="submitFunction()" style="cursor: pointer;">
             <div class="status-flex-data">
-                <span>PUR - 2019 - 056</span>
-                <span><sub>Submitted on</sub></span>
-                <span>06 JUN 2019</span>
-            </div>
-            <div class="status-flex-img">
-                <img src="../images/no.png" width="40" height="40">
+                <span id="text-one" >PUR - 2019 - 056</span>
+                <span id="text-two" >Submitted on</span>
+                <span id="text-three" >06 JUN 2019</span>
             </div>
 
+            <div class="status-flex-img">
+                <img src="../images/no.png" width="50" height="50">
+            </div>
+
+           
             <div class="status-flex-last">
                 <div class="status-flex-last-both">
                     <span class="status-flex-last-text"> AWAITING APPROVAL</span>
@@ -67,16 +92,26 @@
                     <span class="status-flex-last-circle" style="background-color: #FFC60A"></span>
                 </div>
             </div>
+
+            <script>
+                function submitFunction() {
+                    document.location = "../../../REQUISITION/REQUEST-VIEW/html/REQUEST-VIEW.html";
+                }
+            </script>
         </div>
+
+
+
 
         <div class="status-flex">
             <div class="status-flex-data">
-                <span>PUR - 2019 - 056</span>
-                <span><sub>Submitted on</sub></span>
-                <span>06 JUN 2019</span>
+                <span id="text-one">PUR - 2019 - 056</span>
+                <span id="text-two">Submitted on</span>
+                <span id="text-three">06 JUN 2019</span>
             </div>
+
             <div class="status-flex-img">
-                <img src="../images/no.png" width="40" height="40">
+                <img src="../images/no.png" width="50" height="50">
             </div>
 
             <div class="status-flex-last">
@@ -88,14 +123,16 @@
             </div>
         </div>
 
+
+
         <div class="status-flex">
             <div class="status-flex-data">
-                <span>PUR - 2019 - 056</span>
-                <span><sub>Last saved on</sub></span>
-                <span>06 JUN 2019</span>
+                <span id="text-one">PUR - 2019 - 056</span>
+                <span id="text-two">Last saved on</span>
+                <span id="text-three">06 JUN 2019</span>
             </div>
             <div class="status-flex-img">
-                <img src="../images/no.png" width="40" height="40">
+                <img src="../images/no.png" width="50" height="50">
             </div>
 
             <div class="status-flex-last">
@@ -107,14 +144,16 @@
             </div>
         </div>
 
+
+
         <div class="status-flex">
             <div class="status-flex-data">
-                <span>PUR - 2019 - 056</span>
-                <span><sub>Submitted on</sub></span>
-                <span>20 JUN 2019</span>
+                <span id="text-one">PUR - 2019 - 056</span>
+                <span id="text-two">Submitted on</span>
+                <span id="text-three">20 JUN 2019</span>
             </div>
             <div class="status-flex-img">
-                <img src="../images/no.png" width="40" height="40">
+                <img src="../images/no.png" width="50" height="50">
             </div>
 
             <div class="status-flex-last">
@@ -133,6 +172,26 @@
         </div>
 
     </div>
+
+    <script>
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
