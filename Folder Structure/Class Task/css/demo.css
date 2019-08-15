@@ -111,6 +111,7 @@ body{
 #program{
 color: blueviolet;
 padding-bottom: 2px;
+border-bottom: 2px solid blueviolet;
 }
 
 #impl{
@@ -128,17 +129,24 @@ padding-right: 20px;
 }
 
 
+
+.info{
+border-left:1px solid black;
+margin-left: 4%;
+}
+
 .detailed-text{
     display: flex;
     flex-direction:column;
-    padding-bottom: 1.5%;
+    padding-bottom: 1.5%;    
 }
 
 
 .first-intro{
     display: flex;
     flex-direction:row;
-    align-items: center;   
+    align-items: flex-start;
+       
 }
 
 .circle{
@@ -146,35 +154,41 @@ padding-right: 20px;
     width: 12px;
     border-radius: 50%;
     display: inline-block;
-    margin-left: 3%;
+    margin-left: -7px;
     border:1px solid black;
+    background: #FFFFFF;
 }
 
 #intro-text{
     font-weight: bold;
-    margin-left: 3%;
+    padding-left: 2%;
+}
+
+#text{
+    padding-left: 3%;
+    padding-top: 1%;
 }
 
 
-
 .craete-title{
-    
     display: flex;
     flex-direction: column;
     width: 70%;
 }
 .craete-title-sub{
     background: rgb(117, 145, 219);
+    display: flex;
+    align-items: center;
 }
 .create-text-left{
     width: 50%;
     float: left;
-    padding-left: 3%
+    
 }
 
 #create-text-left-span{
-    padding-left: 7%;
     font-weight: bold;
+    padding-left: 5%;
 }
 .create-text-right{
     width: 50%;
@@ -182,6 +196,6 @@ padding-right: 20px;
 }
 
 .create-text-right-sub{
-    width: 30%;
+    width: 40%;
     float: right;
 }
