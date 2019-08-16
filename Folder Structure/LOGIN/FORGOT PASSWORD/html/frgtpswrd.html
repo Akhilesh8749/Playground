@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Forgot Page</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/frgtpswrd.css">
+</head>
+
+<body>
+
+	<div class="first">
+		<form>
+			<div style="min-height: 21vh"></div>
+			<div class="container">
+				<span class="forgot-text">Forgot Password</span>
+
+				<div class="text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<p>Mauris mattis, tortor sit amet tempor vehicula.</p>
+				</div>
+				<div>
+					<p id="email-text">Email</p>
+					<input type="text" name="email" id="email" required>
+					<p id="display1"></p>
+					<p id="display2"></p>
+					<div class="btn">
+						<button type="submit" onclick="sumbitFunction()">Continue</button>
+					</div>
+					<script>
+						var flag = 0;
+						function sumbitFunction() {
+							var em = document.getElementById("email").value;
+
+							if (flag == 0) {
+								if (em == "") {
+									document.getElementById("display1").innerHTML = "<img src='../images/warn.png' width='15' height='15'> This field is required";
+									document.getElementById("display2").innerHTML = "<img src='../images/warn.png' width='15' height='15'> This email is not registered with us";
+								}
+								flag = 1;
+							}
+							else {
+								// document.location = "";
+								alert("Go back");
+							}
+						}
+					</script>
+				</div>
+			</div>
+			<div style="min-height: 25vh"></div>
+		</form>
+	</div>
+
+</body>
+
+</html>
