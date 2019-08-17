@@ -5,63 +5,83 @@
 }
 
 body{
-  font-family: "Roboto";
-  background-color: #F6F8F9;
-  width: 100%;
   margin:auto;
+  background-color: #F6F8F9;
+  box-shadow: 1px 1px 1px 2px #D8D3D3;
+  font-family: 'Roboto';
 }
 
 
 
-.main{
-  margin: auto;
+.head-flex{
+  padding-top:0.6%;
+  padding-bottom: 0.6%;
+    background-color:#FFFFFF;
+  margin-bottom: 20px;
   box-shadow: 1px 1px 1px 1px #D8D3D3;
-  width: 100%;
-  background-color:#FFFFFF;
+  /* border:1px solid green; */
 }
 
-.left-top{
+.left-top-flex{
+  display: flex;
   float: left;
+  justify-content:center;
+  flex-direction:row;
+  align-items: center;
   width: 5%;
+  padding-left: 1%;
+}
+  
+.right-top-flex{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:flex-end;
+  width: 95%;
+  padding-right: 2.5%;
 }
 
-#left-top-img{
-  position: relative;
-  top: 3px;
-  left: 25%;
+.right-top-flex-data{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:center;   
 }
 
-.right-top{
-  float: right;
-  width: 95%;  
+.right-top-flex-data-img{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:center;
+  width: 30%;
+  padding: 2px;  
 }
 
-.right-top-sub{
-  position: relative;
-  right: 2%;
+.right-top-flex-data-txt{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  width: 60%;  
+  padding: 2px; 
+  color:#595959;
+  font-size:14px;
+  font-weight: bold;
+}
+
+.right-top-flex-data-last-img{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
   width: 10%;
-  float: right;
+  padding: 2px;
 }
 
-
-#right-top-img1{
-  border-radius: 50%; 
-  position: relative;
-  top: 2px;
+#image{
+  border-radius: 50%;
 }
 
-.right-top-sub span{
-  margin-bottom: 5px;
-  position: relative;
-  bottom: 10px;
-  color: #595959;
-  font-size: 12px;
-}
-
-#right-top-img2{
-  position: relative;
-  bottom: 8px;
-}
 
 
 
@@ -74,26 +94,29 @@ body{
   margin-top: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
+  /* border:1px solid red; */
 }
 
-
 .my-request-text{
-  position: relative;
-  top: 18px;
-  left: 20px;
-  font-size: 20px;
   width: 15%;
   float: left;
   color:#505050;
   font-size: 16px;
   font-weight: bold;
+  padding-left: 10px;
+  padding-top: 20px;
+  /* border:1px solid red; */
 }
+
 
 .my-request-search{
   position: relative;
-  top: 12px;
-  width: 65%;
+  display: flex;
+  width: 70%;
+  align-items: center;
   float: left;
+  padding-top: 10px;
+  /* border:1px solid red; */
 }
 
 .my-request-search input{
@@ -101,23 +124,26 @@ body{
   border-radius: 20px;
   display: block;
   box-sizing: border-box;
-  width: 800px;
+  margin: auto;
+  width: 95%;
   height: 35px;
 }
 
 .my-request-search img{
-position: absolute;
-float: right;
-right: 60px;
-top:5px;
-}
-
-.my-request-button{
+  position: absolute;
   float: right;
-  width: 20%;
+  right: 4%;
+  top: 35%;
 }
 
 
+
+.btn{
+  float: left;
+  width: 15%;
+  /* border:1px solid red; */
+
+}
 button {
   background-color: #32BDD2;
   color: #FFFFFF;
@@ -129,8 +155,9 @@ button {
   cursor: pointer;
   border-radius: 20px;
   float: right;
-  margin-right: 30px;
+  padding-right: 30px;
 }
+
 
 
 .data{
@@ -177,13 +204,14 @@ color: #5A5A5A;
   border-bottom: 1px solid #FFF2F2;
   padding-top: 25px;
   padding-bottom: 25px;
+  /* border:1px solid red; */
 }
 
 .status-text{
-  position: relative;
-  left: 20px;
+  padding-left: 30px;
   width: 40%;
   float: left; 
+  /* border:1px solid red; */
 }
 
 #status-p1{
@@ -206,32 +234,29 @@ color: #5A5A5A;
 }
 
 .status-img{
-  position: relative;
-  left: 20px;
-  width: 30%;
+  /* border:1px solid red; */
+  width: 20%;
   float: left;
+
 }
 
 #status-img-image{
-  position: relative;
-  left: 35%;
+  /* border:1px solid blue; */
+  margin-left: 40%;
 }
 
 .status-text-right{
-  position: relative;
-  left: 50px;
-  top: 20px;
-  width: 25%;
-  float: left;
+  width: 40%;
+  /* border:1px solid red; */
   font-size: 14px;
   color: #5A5A5A;
+  float: left;
+  padding-top: 30px;
+  padding-right: 20px;
 }
 
 #status-space{
-  padding:5px;
-  position: relative;
-  left: 60%;
-
+  padding-left:  80%;
 }
 
 .status-circle{
@@ -240,29 +265,18 @@ color: #5A5A5A;
   background-color:#24D081;
   border-radius: 50%;
   display: inline-block;
-  position: relative;
-  left: 60%;
 }
 
 
 
 .show-more{
-  position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 .show-more span{
-  position: relative;
-  left: 50%;
+  padding-left: 47%;
   color:#909090;
   font-size: 12px;
   font-weight: bold;
-}
-
-
-.show-more img{
-  position: relative;
-  left: 50%;
-  top:3px;
 }
