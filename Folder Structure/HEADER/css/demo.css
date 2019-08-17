@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header {
+    /* border: 1px solid black; */
+}
+
+.burger-menu {
+    width: 10%;
+    /* border: 1px solid red; */
+    float: left;
+}
+
+.burger-menu-icon{
+    width: 24px;
+    height: 24px;
+    alt: "burger_menu";
+}
+
+.user-menu {
+    width: 90%;
+    float: right;
+    /* border: 1px solid blue; */
+}
+
+
+
+.user-menu-icon1{
+    width: 24px;
+    height: 24px;
+    alt:"user_menu_1";
+    float: right;
+}
+
+.user-menu-text{
+    float: right;
+}
+
+.user-menu-icon2{
+    width: 8px;
+    height: 8px;
+    alt:"user_menu_2";
+    float: right; 
+}
