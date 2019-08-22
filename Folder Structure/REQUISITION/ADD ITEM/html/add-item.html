@@ -16,7 +16,7 @@
 				<span>Add Item</span>
 			</div>
 
-			<div class="head-bar-img">
+			<div class="head-bar-img" onclick="nextPage()">
 				<img src="../images/cls.png" width="30" height="30">
 			</div>
 		</div>
@@ -47,11 +47,18 @@
 
 		<div class="bottom-bar-flex">
 			<div>
-				<a href="#">Cancel</a>
+				<a href="../../REQUISITION FORM 2/html/requisition2.html">Cancel</a>
 			</div> 
 			<div>
-				<button type="submit">Done</button>
+				<button type="submit" onclick="nextPage()">Done</button>
 			</div>
+			<script>
+				function nextPage(){
+
+					document.location="../../REQUISITION FORM 2/html/requisition2.html";
+				}
+			
+			</script>
 		</div>
 	</div>
 

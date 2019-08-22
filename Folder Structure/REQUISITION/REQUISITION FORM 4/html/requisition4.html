@@ -10,19 +10,19 @@
 <body>
 
 	<div class="head-flex">
-        <div class="left-top-flex">
-            <img src="../images/left.png" width="35" height="35">
-        </div>
+		<div class="left-top-flex">
+			<img src="../images/left.png" width="35" height="35">
+		</div>
 
 
-        <div class="right-top-flex">
-            <div class="right-top-flex-data">
-                <div class="right-top-flex-data-img"><img src="../images/a.jpg" width="30" height="30" id="image"></div>
-                <div class="right-top-flex-data-txt"><span>Akhilesh</span></div>
-                <div class="right-top-flex-data-last-img"><img src="../images/last.png" width="15" height="15"></div>
-            </div>
-        </div>
-    </div>
+		<div class="right-top-flex">
+			<div class="right-top-flex-data">
+				<div class="right-top-flex-data-img"><img src="../images/a.jpg" width="30" height="30" id="image"></div>
+				<div class="right-top-flex-data-txt"><span>Akhilesh</span></div>
+				<div class="right-top-flex-data-last-img"><img src="../images/last.png" width="15" height="15"></div>
+			</div>
+		</div>
+	</div>
 
 
 	<div class="outer-flex">
@@ -46,7 +46,7 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					</div>
 
-					<div class="right-main-data-flex-right">
+					<div class="right-main-data-flex-right" onclick="add_people()">
 						<div class="right-main-data-flex-right-span">
 							<span>ADD PEOPLE</span>
 						</div>
@@ -54,6 +54,11 @@
 							<img src="../images/add.png" width="40" height="40">
 						</div>
 					</div>
+					<script>
+						function add_people(){
+						document.location = "../../ADD PEOPLE/html/add-people.html";
+						}
+					</script>
 				</div>
 
 
@@ -102,13 +107,21 @@
 
 				<div class="ref-flex">
 
-					<a href="#" style="color:#595959;">SAVE DRAFT</a>
+					<a href="../../REQUISITION FORM 6-20/html/requisition-ack.html" style="color:#595959;">SAVE
+						DRAFT</a>
 
 					<div>
-						<a href="#" style="color:#32BDD2; padding-right: 20px;">Back</a>
-						<button type="submit">Next<img src="../images/arrow.png" width="20" height="20"
-								style="padding-top: 8px;"></button>
+						<a href="../../REQUISITION FORM 3-23/html/requisition3.html"
+							style="color:#32BDD2; padding-right: 20px;">Back</a>
+						<button type="submit" onclick="nextPage()">Next<img src="../images/arrow.png" width="20"
+								height="20" style="padding-top: 8px;"></button>
 					</div>
+
+					<script>
+						function nextPage() {
+							document.location = "../../REQUISITION FORM 5/html/requisition5.html";
+						}
+					</script>
 				</div>
 			</div>
 

@@ -10,19 +10,19 @@
 <body>
 
 	<div class="head-flex">
-        <div class="left-top-flex">
-            <img src="../images/left.png" width="35" height="35">
-        </div>
+		<div class="left-top-flex">
+			<img src="../images/left.png" width="35" height="35">
+		</div>
 
 
-        <div class="right-top-flex">
-            <div class="right-top-flex-data">
-                <div class="right-top-flex-data-img"><img src="../images/a.jpg" width="30" height="30" id="image"></div>
-                <div class="right-top-flex-data-txt"><span>Akhilesh</span></div>
-                <div class="right-top-flex-data-last-img"><img src="../images/last.png" width="15" height="15"></div>
-            </div>
-        </div>
-    </div>
+		<div class="right-top-flex">
+			<div class="right-top-flex-data">
+				<div class="right-top-flex-data-img"><img src="../images/a.jpg" width="30" height="30" id="image"></div>
+				<div class="right-top-flex-data-txt"><span>Akhilesh</span></div>
+				<div class="right-top-flex-data-last-img"><img src="../images/last.png" width="15" height="15"></div>
+			</div>
+		</div>
+	</div>
 
 
 	<div class="outer-flex">
@@ -34,7 +34,7 @@
 				</div>
 
 				<div class="vertical-img-flex">
-					<img src="../images/2.png" width="70" >
+					<img src="../images/2.png" width="70">
 				</div>
 			</div>
 
@@ -46,7 +46,7 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					</div>
 
-					<div class="right-main-data-flex-right">
+					<div class="right-main-data-flex-right" onclick="add_item()">
 						<div class="right-main-data-flex-right-span">
 							<span>ADD ITEMS</span>
 						</div>
@@ -55,6 +55,12 @@
 						</div>
 					</div>
 				</div>
+
+				<script>
+					function add_item() {
+						document.location = "../../ADD ITEM/html/add-item.html";
+					}
+				</script>
 
 				<div class="details-flex">
 					<div class="details-flex-first">
@@ -79,7 +85,16 @@
 					</div>
 
 					<div class="details-flex-fifth">
-						<img src="../images/equal.png">
+						<ul>
+							<li class="dropdown">
+								<a href="javascript:void(0)"><img src="../images/equal.png"  onclick="myFunction()"
+										class="dropbtn" alt="Image not Found" ></a>
+								<div id="myDropdown" class="dropdown-content">
+									<a href="#">EDIT</a>
+									<a href="#">DELETE</a>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 
@@ -198,18 +213,43 @@
 
 				<div class="ref-flex">
 
-					<a href="#" style="color:#595959;">SAVE DRAFT</a>
+					<a href="../../REQUISITION FORM 6-20/html/requisition-ack.html" style="color:#595959;">SAVE
+						DRAFT</a>
 
 					<div>
-						<a href="#" style="color:#32BDD2; padding-right: 20px;">Back</a>
-						<button type="submit">Next<img src="../images/arrow.png" width="20" height="20"
-								style="padding-top: 8px;"></button>
+						<a href="../../REQUISITION FORM 1/html/requisition.html"
+							style="color:#32BDD2; padding-right: 20px;">Back</a>
+						<button type="submit" onclick="nextPage()">Next<img src="../images/arrow.png" width="20"
+								height="20" style="padding-top: 8px;"></button>
 					</div>
+					<script>
+						function nextPage() {
+							document.location = "../../REQUISITION FORM 3-23/html/requisition3.html";
+						}
+					</script>
 				</div>
 			</div>
 
 		</div>
+		<script>
 
+			function myFunction() {
+				document.getElementById("myDropdown").classList.toggle("show");
+			}
+
+			window.onclick = function (event) {
+				if (!event.target.matches('.dropbtn')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+						if (openDropdown.classList.contains('show')) {
+							openDropdown.classList.remove('show');
+						}
+					}
+				}
+			}
+		</script>
 
 </body>
 
