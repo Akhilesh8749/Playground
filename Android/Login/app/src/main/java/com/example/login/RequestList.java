@@ -22,7 +22,9 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListPopupWindow;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class RequestList extends AppCompatActivity {
@@ -31,18 +33,30 @@ public class RequestList extends AppCompatActivity {
     ImageView img1;
     ListPopupWindow list1;
     TextView listpopup;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_list);
-        String[] products={"Camera", "Laptop", "Watch","Smartphone",
-                "Television"};
+        String[] status={"Clear", "Approved", "Draft", "Awaiting", "Rejected"};
+
+        listView=findViewById(R.id.listVew);
+
+        String title[]={"PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056"};
+        String date[]={"06 Jul 2019","06 Jul 2019","06 Jul 2019","06 Jul 2019"};
+        String statusTitle[]={"APPROVED","APPROVED","APPROVED","APPROVED"};
+
+
+
+
+        ListAdapter listAdapter=new com.example.login.MyListAdapter(getApplicationContext(),title,date,status);
+        listView.setAdapter(listAdapter);
 
         img1=findViewById(R.id.imageView6);
         listpopup= findViewById(R.id.listpopup);
         list1 = new ListPopupWindow(getApplicationContext());
-        list1.setAdapter(new ArrayAdapter(getApplicationContext(), R.layout.list, products));
+        list1.setAdapter(new ArrayAdapter(getApplicationContext(), R.layout.list, status));
         list1.setAnchorView(img1);
         list1.setModal(true);
         img1.setOnClickListener(new View.OnClickListener() {

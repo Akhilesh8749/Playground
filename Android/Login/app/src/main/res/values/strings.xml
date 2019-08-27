@@ -24,4 +24,12 @@
     <string name="this_is_not_a_valid_email">This is not a valid email</string>
     <string name="this_email_is_not_registered_with_us">This email is not registered with us.</string>
     <string name="todo">TODO</string>
+    <string name="the_link_has_been_sent_to_your_email">The link has been sent to your email.</string>
+    <string name="the_generated_link_will_be_active_for_24_hours">The generated link will be active for 24 hours.</string>
+    <string name="new_request">NEW REQUEST</string>
+    <string name="search">Search</string>
+    <string name="showing_approved_requests">Showing approved requests.</string>
+    <string name="filter">FILTER</string>
+    <string name="my_requests">My Requests</string>
+    <string name="submitted_on">Submitted on</string>
 </resources>

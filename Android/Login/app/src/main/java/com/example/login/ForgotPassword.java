@@ -2,6 +2,7 @@ package com.example.login;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.view.View;
@@ -14,8 +15,7 @@ import static com.example.login.R.layout.alertdialog;
 
 public class ForgotPassword extends AppCompatActivity {
     Button button;
-    ImageView iv3, iv4;
-    TextView tv4, tv5;
+    ConstraintLayout c1;
     AlertDialog.Builder alertBuilder;
     EditText et1;
 
@@ -25,11 +25,9 @@ public class ForgotPassword extends AppCompatActivity {
         setContentView(R.layout.activity_forgot_password);
 
         button=findViewById(R.id.button2);
-        iv3=findViewById(R.id.imageView3);
-        iv4=findViewById(R.id.imageView4);
-        tv4=findViewById(R.id.textView7);
-        tv5=findViewById(R.id.textView8);
         et1=findViewById(R.id.editText2);
+        c1=findViewById(R.id.hiddenThree);
+
 
         alertBuilder=new AlertDialog.Builder(this);
 
@@ -37,10 +35,7 @@ public class ForgotPassword extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(et1.getText().toString().equals("")) {
-                    iv3.setVisibility(View.VISIBLE);
-                    iv4.setVisibility(View.VISIBLE);
-                    tv4.setVisibility(View.VISIBLE);
-                    tv5.setVisibility(View.VISIBLE);
+                     c1.setVisibility(View.VISIBLE);
                 }
 
                 else{
