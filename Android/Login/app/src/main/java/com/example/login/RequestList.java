@@ -1,5 +1,6 @@
 package com.example.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -21,6 +22,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListPopupWindow;
@@ -34,6 +36,7 @@ public class RequestList extends AppCompatActivity {
     ListPopupWindow list1;
     TextView listpopup;
     ListView listView;
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,15 +45,22 @@ public class RequestList extends AppCompatActivity {
         String[] status={"Clear", "Approved", "Draft", "Awaiting", "Rejected"};
 
         listView=findViewById(R.id.listVew);
+        btn=findViewById(R.id.button3);
 
         String title[]={"PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056"};
         String date[]={"06 Jul 2019","06 Jul 2019","06 Jul 2019","06 Jul 2019"};
         String statusTitle[]={"APPROVED","APPROVED","APPROVED","APPROVED"};
 
 
+        btn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent3= new Intent(getApplicationContext(),Recycler.class);
+            startActivity(intent3);
+        }
+        });
 
-
-        ListAdapter listAdapter=new com.example.login.MyListAdapter(getApplicationContext(),title,date,status);
+        ListAdapter listAdapter=new com.example.login.MyListAdapter(getApplicationContext(),title,date,statusTitle);
         listView.setAdapter(listAdapter);
 
         img1=findViewById(R.id.imageView6);

@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Recycler"></activity>
         <activity
             android:name=".RequestList"
             android:label="@string/title_activity_request_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".MainActivity">
             <intent-filter>

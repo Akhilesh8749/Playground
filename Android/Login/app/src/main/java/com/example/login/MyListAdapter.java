@@ -33,6 +33,7 @@ public class MyListAdapter extends BaseAdapter {
         title=view.findViewById(R.id.title);
         date=view.findViewById(R.id.date);
         statusTitle=view.findViewById(R.id.statusTitle);
+
         title.setText(String.valueOf(titles[position]));
         date.setText(String.valueOf(dates[position]));
         statusTitle.setText(String.valueOf(statusTitles[position]));
