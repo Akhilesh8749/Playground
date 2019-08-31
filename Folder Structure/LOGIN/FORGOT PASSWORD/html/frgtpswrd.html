@@ -5,6 +5,7 @@
 	<title>Forgot Page</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="../css/frgtpswrd.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 
 <body>
@@ -19,6 +20,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					<p>Mauris mattis, tortor sit amet tempor vehicula.</p>
 				</div>
+
 				<div>
 					<p id="email-text">Email</p>
 					<input type="text" name="email" id="email" required>
@@ -40,8 +42,7 @@
 								flag = 1;
 							}
 							else {
-								// document.location = "";
-								alert("Go back");
+								document.location = "#popup1";
 							}
 						}
 					</script>
@@ -49,7 +50,27 @@
 			</div>
 			<div style="min-height: 25vh"></div>
 		</form>
+
+
 	</div>
+
+	<div id="popup1" class="overlay">
+		<div class="popup">
+			<div class="forgot-close">
+				<span class="forgot-text">Forgot Password</span>
+				<a class="close" href="../../LOGIN-HTML/html/login.html">&times;</a>
+			</div>
+
+			<div class="content">
+				The link has been sent to your email.<br>The generated link will be active for 24 hours.
+			</div>
+		</div>
+	</div>
+
+
+
+
+
 
 </body>
 

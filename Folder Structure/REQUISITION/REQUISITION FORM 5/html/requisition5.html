@@ -25,93 +25,190 @@
 	</div>
 
 
-	<div>
-		<div class="data-flex">
-			<div class="vertical-main">
+	<div class="data-flex">
+		<div class="vertical-main">
 
-				<div class="vertical-text-flex">
-					<span>requisition</span>
-				</div>
-
-				<div class="vertical-img-flex">
-					<img src="../images/5.png" width="70">
-				</div>
+			<div class="vertical-text-flex">
+				<span>requisition</span>
 			</div>
 
-
-			<div class="right-main-flex">
-				<div class="right-main-data-flex">
-					<div class="right-main-data-flex-left">
-						<span>APPROVAL(S)</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</div>
-
-					<div class="right-main-data-flex-right" onclick="add_people()">
-						<div class="right-main-data-flex-right-span">
-							<span>ADD APPROVER</span>
-						</div>
-						<div class="right-main-data-flex-right-img">
-							<img src="../images/add.png" width="40" height="40">
-						</div>
-					</div>
-					<script>
-					function add_people(){
-						document.location="../../ADD PEOPLE 5/html/add-people.html";
-					}
-					</script>
-				</div>
-
-
-
-				<div class="box-flex">
-					<div class="box-flex-dp">
-						<img src="../images/img1.png" width="30" height="30">
-					</div>
-					<div class="box-flex-data">
-						<span class="font-12">Akhilesh</span>
-						<span class="font-10">Lorem ipsum dolor sit amet.</span>
-					</div>
-					<div class="box-flex-img">
-						<img src="../images/del.png" width="25" height="25">
-					</div>
-				</div>
-
-
-				<div class="box-flex">
-					<div class="box-flex-dp">
-						<img src="../images/img2.png" width="30" height="30">
-					</div>
-					<div class="box-flex-data">
-						<span class="font-12">Akhil</span>
-						<span class="font-10">Lorem ipsum dolor sit amet.</span>
-					</div>
-					<div class="box-flex-img">
-						<img src="../images/del.png" width="25" height="25">
-					</div>
-				</div>
-
-
-				<div class="ref-flex">
-
-					<a href="../../REQUISITION FORM 6-20/html/requisition-ack.html" style="color:#595959;">SAVE
-						DRAFT</a>
-
-					<div>
-						<a href="../../REQUISITION FORM 4/html/requisition4.html" style="color:#32BDD2; padding-right: 20px;">Back</a>
-						<button type="submit" onclick="nextPage()">Next<img src="../images/arrow.png" width="20" height="20"
-								style="padding-top: 8px;"></button>
-					</div>
-					<script>
-						function nextPage() {
-							document.location = "../../REQUISITION FORM 6-16/html/requisition6.html";
-						}
-					</script>
-				</div>
+			<div class="vertical-img-flex">
+				<img src="../images/5.png" width="70">
 			</div>
-
 		</div>
 
 
+		<div class="right-main-flex">
+			<div class="right-main-data-flex">
+				<div class="right-main-data-flex-left">
+					<span>APPROVAL(S)</span>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+
+				<div class="right-main-data-flex-right" onclick="add_people()">
+					<div class="right-main-data-flex-right-span">
+						<span>ADD APPROVER</span>
+					</div>
+					<div class="right-main-data-flex-right-img">
+						<img src="../images/add.png" width="40" height="40">
+					</div>
+				</div>
+				<script>
+					function add_people() {
+						document.location = "#add-people-5";
+					}
+				</script>
+			</div>
+
+
+
+			<div class="box-flex">
+				<div class="box-flex-dp">
+					<img src="../images/img1.png" width="30" height="30">
+				</div>
+				<div class="box-flex-data">
+					<span class="font-12">Akhilesh</span>
+					<span class="font-10">Lorem ipsum dolor sit amet.</span>
+				</div>
+				<div class="box-flex-img">
+					<img src="../images/del.png" width="25" height="25">
+				</div>
+			</div>
+
+
+			<div class="box-flex">
+				<div class="box-flex-dp">
+					<img src="../images/img2.png" width="30" height="30">
+				</div>
+				<div class="box-flex-data">
+					<span class="font-12">Akhil</span>
+					<span class="font-10">Lorem ipsum dolor sit amet.</span>
+				</div>
+				<div class="box-flex-img">
+					<img src="../images/del.png" width="25" height="25">
+				</div>
+			</div>
+
+			<div style="min-height: 35vh"></div>
+			<div class="ref-flex">
+				<div class="save">
+					<a href="../../REQUISITION FORM 6-20-5/html/requisition-ack-5.html" style="color:#595959;">SAVE
+						DRAFT</a>
+				</div>
+				<div>
+					<a href="../../REQUISITION FORM 4/html/requisition4.html"
+						style="color:#32BDD2; padding-right: 20px;">Back</a>
+					<button type="submit" onclick="nextPage1()">Next<img src="../images/arrow.png" width="20"
+							height="20" style="padding-top: 8px;"></button>
+				</div>
+				<script>
+					function nextPage1() {
+						document.location = "../../REQUISITION FORM 6-16/html/requisition6.html";
+					}
+				</script>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<div id="add-people-5" class="overlay">
+
+		<div class="popup">
+			<div class="head-bar-flex">
+				<div class="head-bar-text">
+					<span>Add People</span>
+				</div>
+
+				<div class="head-bar-img" onclick="nextPage()">
+					<img src="../images/cls.png" width="30" height="30">
+				</div>
+			</div>
+
+
+			<div class="myreq-search">
+				<input type="text" size="40" placeholder="         Search">
+				<img src='../images/ser.png' width="25" height="25">
+			</div>
+
+			<div class="add-people-box-main">
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhil</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30">
+					</div>
+				</div>
+
+
+
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhil</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30">
+					</div>
+				</div>
+
+
+
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhil</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30">
+					</div>
+				</div>
+
+
+
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhil</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30">
+					</div>
+				</div>
+			</div>
+			<div class="add-people-bottom-bar-flex">
+				<div>
+					<a href="../../REQUISITION FORM 5/html/requisition5.html">Cancel</a>
+				</div>
+				<div>
+					<button type="submit" onclick="nextPage()">Done</button>
+				</div>
+				<script>
+					function nextPage() {
+
+						document.location = "../../REQUISITION FORM 5/html/requisition5.html";
+					}
+
+				</script>
+			</div>
+		</div>
+</div>
+<div style="min-height: 3vh"></div>
 </body>
 
 </html>

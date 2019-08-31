@@ -47,10 +47,10 @@ public class RequestList extends AppCompatActivity {
         listView=findViewById(R.id.listVew);
         btn=findViewById(R.id.button3);
 
+
         String title[]={"PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056"};
         String date[]={"06 Jul 2019","06 Jul 2019","06 Jul 2019","06 Jul 2019"};
         String statusTitle[]={"APPROVED","APPROVED","APPROVED","APPROVED"};
-
 
         btn.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -60,7 +60,7 @@ public class RequestList extends AppCompatActivity {
         }
         });
 
-        ListAdapter listAdapter=new com.example.login.MyListAdapter(getApplicationContext(),title,date,statusTitle);
+        ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),title,date,statusTitle);
         listView.setAdapter(listAdapter);
 
         img1=findViewById(R.id.imageView6);

@@ -55,8 +55,8 @@
 						</div>
 					</div>
 					<script>
-						function add_people(){
-						document.location = "../../ADD PEOPLE/html/add-people.html";
+						function add_people() {
+							document.location = "#add-people";
 						}
 					</script>
 				</div>
@@ -104,21 +104,21 @@
 				</div>
 
 
-
+				<div style="min-height: 30vh"></div>
 				<div class="ref-flex">
-
-					<a href="../../REQUISITION FORM 6-20/html/requisition-ack.html" style="color:#595959;">SAVE
-						DRAFT</a>
-
+					<div class="save">
+						<a href="../../REQUISITION FORM 6-20-4/html/requisition-ack-4.html" style="color:#595959;">SAVE
+							DRAFT</a>
+					</div>
 					<div>
 						<a href="../../REQUISITION FORM 3-23/html/requisition3.html"
 							style="color:#32BDD2; padding-right: 20px;">Back</a>
-						<button type="submit" onclick="nextPage()">Next<img src="../images/arrow.png" width="20"
+						<button type="submit" onclick="nextPage1()">Next<img src="../images/arrow.png" width="20"
 								height="20" style="padding-top: 8px;"></button>
 					</div>
 
 					<script>
-						function nextPage() {
+						function nextPage1() {
 							document.location = "../../REQUISITION FORM 5/html/requisition5.html";
 						}
 					</script>
@@ -126,6 +126,113 @@
 			</div>
 
 		</div>
+	</div>
+
+
+	<div id="add-people" class="overlay">
+		<div class="popup">
+
+
+
+			<div class="head-bar-flex">
+				<div class="head-bar-text">
+					<span>Add People</span>
+				</div>
+
+				<div class="head-bar-img" onclick="nextPage()">
+					<img src="../images/cls.png" width="30" height="30">
+				</div>
+			</div>
+
+
+			<div class="myreq-search">
+				<input type="text" size="40" placeholder="         Search">
+				<img src='../images/ser.png' width="25" height="25">
+			</div>
+
+			<div class="add-people-box-main">
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhil</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30">
+					</div>
+				</div>
+
+
+
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhil</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30">
+					</div>
+				</div>
+
+
+
+
+
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhil</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30">
+					</div>
+				</div>
+
+
+
+
+
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhil</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30">
+					</div>
+				</div>
+			</div>
+
+			<div class="add-people-bottom-bar-flex">
+				<div>
+					<a href="../../REQUISITION FORM 4/html/requisition4.html">Cancel</a>
+				</div>
+				<div>
+					<button type="submit" onclick="nextPage()">Done</button>
+				</div>
+				<script>
+					function nextPage() {
+
+						document.location = "../../REQUISITION FORM 4/html/requisition4.html";
+					}
+
+				</script>
+			</div>
+
+		</div>
+	</div>
+	<div style="min-height: 3vh"></div>
 
 
 </body>

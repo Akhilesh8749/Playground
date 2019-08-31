@@ -99,8 +99,7 @@ body{
   align-items: center;
   justify-content: center;
   width: 10%;
-  padding-bottom: 100%;
-  margin-bottom: 130px;
+  /* border:1px solid red; */
 }
 
 .vertical-text-flex{
@@ -400,7 +399,14 @@ padding-top:10px;
   font-size: 12px;
 }
 
-
+.save a{
+  text-decoration: none;
+  color:#595959;
+  border-bottom: 1px solid #595959;
+  padding-bottom: 2px;
+  font-size: 12px;
+  font-weight: bold;
+}
 button {
   background-color: #32BDD2;
   color: white;

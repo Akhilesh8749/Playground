@@ -6,13 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
 
 public class Recycler extends AppCompatActivity {
     RecyclerView recyclerView;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +25,5 @@ public class Recycler extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         MyRecyclerListAdapter myRecyclerListAdapter=new MyRecyclerListAdapter(getApplicationContext(),title,date,statusTitle);
         recyclerView.setAdapter(myRecyclerListAdapter);
-    }
-
-    public class Adapter {
-    }
-
-    public class ViewHolder {
-        public ViewHolder(View itemView) {
-        }
     }
 }

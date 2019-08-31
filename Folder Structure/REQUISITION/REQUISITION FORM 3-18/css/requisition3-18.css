@@ -192,7 +192,7 @@ body{
   align-items: center;
   border:2px dashed white;
   margin: auto;
-  width: 50%;
+  width: 80%;
   padding: 5px;
   color: #FFFFFF;
 }
@@ -294,6 +294,15 @@ body{
   padding-top: 100px;
   font-weight: bold;
   font-size: 12px;
+}
+
+.save a{
+  text-decoration: none;
+  color:#595959;
+  border-bottom: 1px solid #595959;
+  padding-bottom: 2px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 button {
