@@ -98,11 +98,11 @@
 				<div>
 					<a href="../../REQUISITION FORM 4/html/requisition4.html"
 						style="color:#32BDD2; padding-right: 20px;">Back</a>
-					<button type="submit" onclick="nextPage1()">Next<img src="../images/arrow.png" width="20"
+					<button type="submit" onclick="nextPage2()">Next<img src="../images/arrow.png" width="20"
 							height="20" style="padding-top: 8px;"></button>
 				</div>
 				<script>
-					function nextPage1() {
+					function nextPage2() {
 						document.location = "../../REQUISITION FORM 6-16/html/requisition6.html";
 					}
 				</script>
@@ -121,7 +121,129 @@
 					<span>Add People</span>
 				</div>
 
-				<div class="head-bar-img" onclick="nextPage()">
+				<div class="head-bar-img" onclick="nextPage()" id="cursor">
+					<img src="../images/cls.png" width="30" height="30">
+				</div>
+			</div>
+
+
+			<div class="myreq-search" onclick="gotoSearch()" id="cursor">
+				<input type="text" size="40" placeholder="         Search">
+				<img src='../images/ser.png' width="25" height="25">
+			</div>
+			<script>
+				function gotoSearch() {
+					document.location = "#change-search";
+				}
+			</script>
+
+
+
+			<div class="add-people-box-main">
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhilesh</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30" onclick="change()">
+					</div>
+				</div>
+				<script>
+					function change() {
+						document.location = "#change-img";
+					}
+				</script>
+
+
+
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhil</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30">
+					</div>
+				</div>
+
+
+
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhil</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30">
+					</div>
+				</div>
+
+
+
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhil</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="add-people-bottom-bar-flex">
+				<div class="cancel-link">
+					<a href="../../REQUISITION FORM 5/html/requisition5.html">Cancel</a>
+				</div>
+				<div class="text-btn">
+					<span class="rounded"> you haven't selected any person &nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<button type="submit" class="alert-btn" onclick="nextPage()">Done</button>
+				</div>
+
+				<script>
+					function nextPage() {
+						document.location = "../../REQUISITION FORM 5/html/requisition5.html";
+					}
+
+				</script>
+			</div>
+		</div>
+	</div>
+	<div style="min-height: 3vh"></div>
+
+
+
+
+
+
+
+
+
+	<div id="change-img" class="overlay">
+		<div class="popup">
+
+
+
+			<div class="head-bar-flex">
+				<div class="head-bar-text">
+					<span>Add People</span>
+				</div>
+
+				<div class="head-bar-img" onclick="nextPage()" id="cursor">
 					<img src="../images/cls.png" width="30" height="30">
 				</div>
 			</div>
@@ -138,11 +260,11 @@
 						<img src="../images/img1.png" width="35" height="35">
 					</div>
 					<div class="add-people-box-flex-data">
-						<span class="font-12">Akhil</span>
+						<span class="font-12">Akhilesh</span>
 						<span class="font-10">Lorem ipsum dolor sit amet.</span>
 					</div>
 					<div class="add-people-box-flex-img">
-						<img src="../images/add.png" width="30" height="30">
+						<img src="../images/minus.png" width="30" height="30" onclick="add_people()">
 					</div>
 				</div>
 
@@ -163,6 +285,8 @@
 
 
 
+
+
 				<div class="add-people-box-flex">
 					<div class="add-people-box-flex-dp">
 						<img src="../images/img1.png" width="35" height="35">
@@ -175,6 +299,8 @@
 						<img src="../images/add.png" width="30" height="30">
 					</div>
 				</div>
+
+
 
 
 
@@ -191,24 +317,158 @@
 					</div>
 				</div>
 			</div>
+
+
 			<div class="add-people-bottom-bar-flex">
-				<div>
+				<div class="cancel-link">
 					<a href="../../REQUISITION FORM 5/html/requisition5.html">Cancel</a>
 				</div>
 				<div>
-					<button type="submit" onclick="nextPage()">Done</button>
+					<span class="cancel-rounded"> 1 person selected &nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<button type="submit" class="alert-btn" onclick="nextPage1()">Done</button>
 				</div>
-				<script>
-					function nextPage() {
 
+				<script>
+					function nextPage1() {
 						document.location = "../../REQUISITION FORM 5/html/requisition5.html";
 					}
 
 				</script>
 			</div>
+
 		</div>
-</div>
-<div style="min-height: 3vh"></div>
+	</div>
+	<div style="min-height: 3vh"></div>
+
+
+
+
+	<div id="change-search" class="overlay">
+		<div class="popup">
+
+
+
+			<div class="head-bar-flex">
+				<div class="head-bar-text">
+					<span>Add People</span>
+				</div>
+
+				<div class="head-bar-img" onclick="nextPage()" id="cursor">
+					<img src="../images/cls.png" width="30" height="30">
+				</div>
+			</div>
+
+
+			<div class="myreq-search" onclick="onePerson()" id="cursor">
+				<input type="text" size="40" placeholder="         Akhilesh">
+				<img src='../images/ser.png' width="25" height="25">
+			</div>
+
+			<script>
+				function onePerson() {
+					document.location = "#selected-person";
+				}
+			</script>
+
+
+			<div class="not-found">
+				<img src="../images/display.png" width="80" height="80">
+				<span id="no">No Results Found.</span>
+				<span id="we">We can’t find any item matching your search.</span>
+			</div>
+
+
+			<div class="add-people-bottom-bar-flex">
+				<div class="cancel-link">
+					<a href="../../REQUISITION FORM 5/html/requisition5.html">Cancel</a>
+				</div>
+				<div class="text-btn">
+					<span class="rounded"> you haven't selected any person &nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<button type="submit" class="alert-btn" onclick="nextPage()">Done</button>
+				</div>
+
+				<script>
+					function nextPage() {
+						document.location = "../../REQUISITION FORM 5/html/requisition5.html";
+					}
+
+				</script>
+			</div>
+
+		</div>
+	</div>
+	<div style="min-height: 3vh"></div>
+
+
+
+
+
+
+	<div id="selected-person" class="overlay">
+		<div class="popup">
+
+
+
+			<div class="head-bar-flex">
+				<div class="head-bar-text">
+					<span>Add People</span>
+				</div>
+
+				<div class="head-bar-img" onclick="nextPage()" id="cursor">
+					<img src="../images/cls.png" width="30" height="30">
+				</div>
+			</div>
+
+
+			<div class="myreq-search" onclick="onePerson()" id="cursor">
+				<input type="text" size="40" placeholder="         Akhilesh">
+				<img src='../images/ser.png' width="25" height="25">
+			</div>
+
+			<script>
+				function onePerson() {
+					document.location = "#selected-person";
+				}
+			</script>
+
+
+			<div class="add-people-box-main">
+
+				<div class="add-people-box-flex">
+					<div class="add-people-box-flex-dp">
+						<img src="../images/img1.png" width="35" height="35">
+					</div>
+					<div class="add-people-box-flex-data">
+						<span class="font-12">Akhilesh</span>
+						<span class="font-10">Lorem ipsum dolor sit amet.</span>
+					</div>
+					<div class="add-people-box-flex-img">
+						<img src="../images/add.png" width="30" height="30" onclick="change()">
+					</div>
+				</div>
+				<div style="min-height: 25vh"></div>
+			</div>
+
+			<div class="add-people-bottom-bar-flex">
+				<div class="cancel-link">
+					<a href="../../REQUISITION FORM 5/html/requisition5.html">Cancel</a>
+				</div>
+				<div class="text-btn">
+					<span class="rounded"> you haven't selected any person &nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<button type="submit" class="alert-btn" onclick="nextPage()">Done</button>
+				</div>
+
+				<script>
+					function nextPage() {
+						document.location = "../../REQUISITION FORM 5/html/requisition5.html";
+					}
+
+				</script>
+			</div>
+
+		</div>
+	</div>
+	<div style="min-height: 3vh"></div>
 </body>
 
 </html>

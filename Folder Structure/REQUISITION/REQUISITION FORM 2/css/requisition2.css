@@ -157,7 +157,7 @@ body{
   display: flex;
   flex-direction:row;
   align-items: center;
-  margin-right: 35px;
+  margin-right: 3.3%;
   cursor: pointer;
 }
 

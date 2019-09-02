@@ -409,28 +409,106 @@ top: 40%;
 .font-10{
     font-size: 10px;
 }
-  
+ 
 .add-people-box-flex-img{
-    display: flex;
-    justify-content: center;
-    width: 20%;
-    /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  cursor: pointer;
+  /* border: 1px solid blue; */
 }
-  
+
+
 
 .add-people-bottom-bar-flex{
-  display: flex;
-  flex-direction:row;
-  align-items: center;
-  justify-content: space-between;
-  background-color:#FCFCFC;
-  border-radius: 0px 0px 25px 25px;
-  padding-top:30px;
-  padding-bottom:10px;
-  border-top:1px solid #F3DADA;
+display: flex;
+flex-direction:row;
+align-items: center;
+justify-content: space-between;
+background-color:#FCFCFC;
+border-radius: 0px 0px 25px 25px;
+padding-top:30px;
+padding-bottom:10px;
+border-top:1px solid #F3DADA;
+/* border: 1px solid blue; */
 }
 
-.add-people-bottom-bar-flex a{
-  color:#5A5A5A;
-  margin-left: 40px;
+.cancel-link{
+color:#5A5A5A;
+text-decoration: none;
+border-bottom: 1px solid #595959;
+padding-bottom: 2px;
+font-size: 12px;
+font-weight: bold;
+margin-left: 40px;
+}
+
+.cancel-link a{
+text-decoration: none;
+}
+
+
+
+.text-btn{
+display: flex;
+flex-direction: row;
+/* border:1px solid red; */
+align-items: center;
+width: 50%;
+}
+
+.rounded{
+border-radius: 20px 0px 0px 20px;
+padding: 5px 0px 5px 5px;
+border:1px dotted #32BDD2;
+font-size: 12px;
+}
+
+.alert-btn {
+background-color: #32BDD2;
+color: white;
+padding: 8px 25px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+border-radius: 20px;
+position: absolute;
+top: 91%;
+left: 79%;
+}
+
+
+.cancel-rounded{
+border-radius: 20px 0px 0px 20px;
+padding: 5px 0px 5px 5px;
+border:1px dotted #32BDD2;
+font-size: 12px;
+position: absolute;
+top: 93%;
+left: 62%;
+}
+
+.not-found{
+  background: #FCFCFC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+  padding-bottom: 20%;
+}
+
+#no{
+  color: #747474;
+  font-size: 14px;
+}
+
+#we{
+  color: #909090;
+  font-size: 12px;
+}
+
+
+#cursor{
+  cursor: pointer;
 }
