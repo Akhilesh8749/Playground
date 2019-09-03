@@ -16,10 +16,11 @@ body{
 .head-flex{
   padding-top:0.6%;
   padding-bottom: 0.6%;
-    background-color:#FFFFFF;
+  background-color:#FFFFFF;
   margin-bottom: 20px;
   box-shadow: 1px 1px 1px 1px #D8D3D3;
-  /* border:1px solid green; */
+  /* border:1px solid red; */
+  width: 100%;
 }
 
 .left-top-flex{
@@ -30,6 +31,7 @@ body{
   align-items: center;
   width: 5%;
   padding-left: 1%;
+  /* border:1px solid black; */
 }
   
 .right-top-flex{
@@ -39,13 +41,15 @@ body{
   justify-content:flex-end;
   width: 95%;
   padding-right: 2.5%;
+  /* border:1px solid green; */
 }
 
 .right-top-flex-data{
   display: flex;
   flex-direction:row;
   align-items: center;
-  justify-content:center;   
+  justify-content:center;  
+  /* border:1px solid green;  */
 }
 
 .right-top-flex-data-img{
