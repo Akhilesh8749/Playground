@@ -1,0 +1,105 @@
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  background: #F6F8F9;
+  /* border: 1px solid red; */
+}
+
+.first{
+  margin:auto;
+  width: 96%;
+  margin-top:2%;
+  margin-bottom:2%;
+  background: #FFFFFF;
+  box-shadow: 1px 1px #f1f0f0;
+  border-radius: 10px;
+  /* border: 1px solid red; */
+}
+
+.container {
+  margin:auto;
+  background-color: white;
+  width: 40%;
+  background: #FFFFFF;
+  /* border: 1px solid red; */
+}
+ 
+.login-text{
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.login-text span{
+  border-bottom: 3px solid #707070;
+  padding-bottom: 2px;
+  color:#595959;
+  text-transform:uppercase;
+  font-size: 1.17vw;
+  font-weight: bold;
+}
+
+.email-password{
+  color:#505050;
+  font-size: 00.87vw;
+}
+
+#email-password-text{
+  padding-top: 10%;
+  padding-bottom: 2%;
+}
+
+input[type=text], input[type=password] {
+  width: 90%;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  position: relative;
+}
+
+
+.rem-me {
+  padding-bottom: 12%;
+  font-size: 0.73vw;
+  color: #707070;
+}
+
+#checkbox-text{
+  float: left;
+}
+
+#remember{
+  padding-left: 5px; 
+}
+#forgot{
+  float: right;
+}
+
+.psw a{
+  text-decoration: none;
+  color: #707070;
+  border-bottom: 1px solid #868686;
+  padding-bottom: 2px;
+  position: absolute;
+  right: 35%;
+}
+
+button {
+  background-color: #32BDD2;
+  color: white;
+  padding: 15px 30px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 00.87vw;
+}
+
+button:hover {
+  opacity: 0.8;
+}
