@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart(){
         super.onStart();
-        Log.d("lifecycle","onStart invoked");
+        Toast.makeText(MainActivity.this, "onStart", Toast.LENGTH_LONG).show();
     }
     @Override
     protected void onResume() {
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d("lifecycle","onPause invoked");
+        Toast.makeText(MainActivity.this, "onPause", Toast.LENGTH_LONG).show();
     }
     @Override
     protected void onStop() {
@@ -42,6 +42,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d("lifecycle","onDestroy invoked");
+        Toast.makeText(MainActivity.this, "onDestroy", Toast.LENGTH_LONG).show();
     }
 }
