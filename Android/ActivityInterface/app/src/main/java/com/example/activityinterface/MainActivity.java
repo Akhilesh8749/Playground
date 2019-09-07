@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements DemoInterface,DemoInterface3 {
+
+public class MainActivity extends AppCompatActivity implements DemoInterface,DemoInterface3  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity implements DemoInterface,Dem
         myName();
         myAge();
     }
+
+
 
     @Override
     public void myFunction() {
@@ -35,3 +38,4 @@ public class MainActivity extends AppCompatActivity implements DemoInterface,Dem
         Toast.makeText(this, "Age:21", Toast.LENGTH_SHORT).show();
     }
 }
+
