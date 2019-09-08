@@ -7,7 +7,7 @@
 body{
     margin:auto;
     background-color: #F6F8F9;
-    box-shadow: 1px 1px 1px 2px #D8D3D3;
+    box-shadow: 1px 1px 1px 1px #D8D3D3;
     font-family: 'Roboto';
 }
 
@@ -75,7 +75,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 10%;
-    padding: 2px;
+    padding: 1px;
 }
 
 #image{
@@ -97,7 +97,7 @@ body{
     border: 1px solid gainsboro;
     padding-top:1.5%;
     padding-bottom: 1.8%;
-    box-shadow: 1px 1px 1px 2px #D8D3D3;
+    box-shadow: 1px 1px 1px 1px #D8D3D3;
     /* border:1px solid black; */
 }
    
@@ -109,7 +109,16 @@ body{
     color:#505050;
     font-size: 16px;
 }
-  
+
+.myreq-text span{
+    border-bottom: 3px solid #32BDD2;
+    width: 60%;
+    /* border:1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .myreq-search{
     position: relative;
     /* border:1px solid red; */
@@ -162,7 +171,7 @@ button {
     margin:auto;
     background-color: #FFFFFF;
     border: 1px solid #F6E2E2;
-    box-shadow: 1px 1px 1px 2px #D8D3D3;   
+    box-shadow: 1px 1px 1px 1px #D8D3D3;   
     /* border:1px solid red; */
 }
 

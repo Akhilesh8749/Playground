@@ -5,21 +5,20 @@
 }
 
 body{
-    margin:auto;
-    background-color: #F6F8F9;
-    /* box-shadow: 1px 1px 1px 2px #D8D3D3; */
-    font-family: 'Roboto';
+  background-color: #F6F8F9;
+  /* box-shadow: 1px 1px 1px 2px #D8D3D3; */
+  font-family: 'Roboto';
 }
 
 
 
 .head-flex{
-    padding-top:0.6%;
-    padding-bottom: 0.6%;
-    background-color:#FFFFFF;
-    margin-bottom: 20px;
-    box-shadow: 1px 1px 1px 1px #D8D3D3;
-    /* border:1px solid green; */
+  padding-top:0.6%;
+  padding-bottom: 0.6%;
+  background-color:#FFFFFF;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 1px 1px #D8D3D3;
+  /* border:1px solid green; */
 }
 
 .left-top-flex{
@@ -54,7 +53,7 @@ body{
     align-items: center;
     justify-content:center;
     width: 30%;
-    padding: 2px;  
+    padding: 1px;  
 }
 
 .right-top-flex-data-txt{
@@ -88,40 +87,68 @@ body{
   margin:auto;
   display: flex;
   flex-direction:row;
-  align-items: center;
   background-color: #FFFFFF;
-  box-shadow: 1px 1px 1px 2px #D8D3D3;
+  box-shadow: 1px 1px 1px 1px #D8D3D3;
   position: relative;
   
   /* border:1px solid red; */
 }
 
 .vertical-main{
-  display: flex;
-  flex-direction:column;
-  align-items: center;
-  justify-content: center;
   width: 10%;
-  /* border:1px solid red; */
+  /* border:2px solid red; */
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
 }
 
 .vertical-text-flex{
   text-transform: uppercase;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 42.5%;
+  padding-bottom: 42.5%;
   transform: rotate(270deg);
-  /* border:1px solid blue; */
-  }
-
-.vertical-img-flex{
   display: flex;
   align-items: center;
-  /* border:1px solid red; */
+  justify-content: center;
+  /* border:1px solid blue; */
+  position: relative;
 }
 
+
+.bullet{
+  /* border:2px solid black; */
+  display: flex;
+  flex-direction: row;
+  padding-top: 10%;
+}
+
+
+.line{
+  width: 50%;
+  border-right:1px dashed #B5B5B5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: #D3D3D3;
+}
+.circle{
+  height: 30px;
+  width: 30px;
+  margin-right: -15px;
+  border: 1px solid #D3D3D3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;   
+  background: #FFFFFF;
+}
+
+#clr{
+  background: #32BDD2;
+  color: #ffffff;
+}
 
 .right-main-flex{
   display: flex;
@@ -129,6 +156,7 @@ body{
   padding-left: 50px;
   width: 90%;
   /* border:1px solid blue; */
+  background: #FCFCFC;
 }
 
 .right-flex{
@@ -195,6 +223,7 @@ textarea {
   align-items:center;
   justify-content: space-between;
   padding-top: 35px;
+  /* border:1px solid red; */
 }
 
 .save a{
@@ -214,8 +243,10 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 20px;
-  float: right;
   margin-right: 30px;
   font-size: 12px;
   font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
