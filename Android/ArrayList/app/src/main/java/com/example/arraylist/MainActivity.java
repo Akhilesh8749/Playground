@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private  void delete(){
         list.remove(list.size()-1);
+        count=count-1;
 
     }
     private void display() {
