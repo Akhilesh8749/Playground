@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Recycler"></activity>
+        <activity
+            android:name=".RequisitionForm2"
+            android:label="@string/title_activity_requisition_form2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".RequisitionForm1"
+            android:label="@string/title_activity_requisition_form1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Recycler" />
         <activity
             android:name=".RequestList"
             android:label="@string/title_activity_request_list"
