@@ -29,6 +29,8 @@ import android.widget.ListPopupWindow;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class RequestList extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -48,9 +50,9 @@ public class RequestList extends AppCompatActivity {
         btn=findViewById(R.id.button3);
 
 
-        String title[]={"PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056","PUR - 2019 - 056"};
-        String date[]={"06 Jul 2019","06 Jul 2019","06 Jul 2019","06 Jul 2019"};
-        String statusTitle[]={"APPROVED","APPROVED","APPROVED","APPROVED"};
+        ArrayList<String> productNumber = new ArrayList<>();
+        ArrayList<String> productDate = new ArrayList<>();
+        ArrayList<String> productStatus = new ArrayList<>();
 
         btn.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -59,9 +61,32 @@ public class RequestList extends AppCompatActivity {
             startActivity(intent3);
         }
         });
+        productNumber.add("PUR - 2019 - 056");
+        productNumber.add("PUR - 2019 - 057");
+        productNumber.add("PUR - 2019 - 058");
+        productNumber.add("PUR - 2019 - 059");
+        productNumber.add("PUR - 2019 - 060");
 
-        ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),title,date,statusTitle);
+        productDate.add("06 Jul 2019");
+        productDate.add("06 Jul 2018");
+        productDate.add("06 Jul 2017");
+        productDate.add("06 Jul 2016");
+        productDate.add("06 Jul 20195");
+
+
+
+        productStatus.add("AWAITING APPROVAL");
+        productStatus.add("APPROVED");
+        productStatus.add("DRAFT");
+        productStatus.add("REJECTED");
+        productStatus.add("STILL DOING");
+
+
+        ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),productNumber,productDate,productStatus);
         listView.setAdapter(listAdapter);
+
+
+
 
         img1=findViewById(R.id.imageView6);
         listpopup= findViewById(R.id.listpopup);

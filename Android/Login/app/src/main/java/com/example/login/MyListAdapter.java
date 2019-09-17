@@ -4,19 +4,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+
 public class MyListAdapter extends BaseAdapter {
-    String titles[]={},dates[]={},statusTitles[]={};
-    private Context context;
-    public MyListAdapter(Context context, String[] title, String[] date, String[] statusTitle) {
+    Context context;
+    ArrayList<String> proNum;
+    ArrayList<String> proDate;
+    ArrayList<String> proStatus;
+    public MyListAdapter(Context context, ArrayList<String> title, ArrayList<String> date, ArrayList<String> status) {
         this.context=context;
-        this.titles=title;
-        this.dates=date;
-        this.statusTitles=statusTitle;
+        this.proNum=title;
+        this.proDate=date;
+        this.proStatus=status;
     }
     @Override
     public int getCount() {
-        return titles.length;
+        return proNum.size();
     }
     @Override
     public Object getItem(int position) {
@@ -29,14 +35,18 @@ public class MyListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view=LayoutInflater.from(context).inflate(R.layout.list_display,parent,false);
-        TextView title,date,statusTitle;
-        title=view.findViewById(R.id.title);
-        date=view.findViewById(R.id.date);
-        statusTitle=view.findViewById(R.id.statusTitle);
+        TextView PN,PD,PS;
+        ImageView IV;
+        PN=view.findViewById(R.id.title);
+        PD=view.findViewById(R.id.date);
+        PS=view.findViewById(R.id.statusTitle);
+        IV=view.findViewById(R.id.imageView8);
 
-        title.setText(String.valueOf(titles[position]));
-        date.setText(String.valueOf(dates[position]));
-        statusTitle.setText(String.valueOf(statusTitles[position]));
+        PN.setText(proNum.get(position));
+        PD.setText(proDate.get(position));
+        PS.setText(proStatus.get(position));
+        IV.setImageResource(R.drawable.notification);
+
         return view;
     }
 }
