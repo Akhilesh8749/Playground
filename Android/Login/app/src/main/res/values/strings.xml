@@ -34,4 +34,5 @@
     <string name="submitted_on">Submitted on</string>
     <string name="title_activity_requisition_form1">RequisitionForm1</string>
     <string name="title_activity_requisition_form2">RequisitionForm2</string>
+    <string name="title_activity_requisition_form3">RequisitionForm3</string>
 </resources>

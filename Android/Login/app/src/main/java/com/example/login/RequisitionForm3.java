@@ -20,54 +20,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 
-import java.util.ArrayList;
-
-public class RequisitionForm2 extends AppCompatActivity {
-
-    ListView listView;
+public class RequisitionForm3 extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_requisition_form2);
-
-
-
-        listView=findViewById(R.id.requsitionListView);
-
-        ArrayList<String> productNumber = new ArrayList<>();
-        ArrayList<String> productDate = new ArrayList<>();
-        ArrayList<String> productPrice = new ArrayList<>();
-        ArrayList<String> productDescription = new ArrayList<>();
-
-        productNumber.add("01");
-        productDate.add("10 Jul 2019");
-        productPrice.add("Rs. 45, 000");
-        productDescription.add("IBM ThinkServer TS150 Tower Server " +
-                "With Max. Processor 1 x Intel Xeon E3 " +
-                "(Quad Core) E3-1225 v5\"(3.3 GHz " +
-                "/Cache 8 MB)... / STD MEMORY 8GB X 1/ MAX.");
-
-
-        productNumber.add("02");
-        productDate.add("10 Jul 2019");
-        productPrice.add("Rs. 45, 000");
-        productDescription.add("IBM ThinkServer TS150 Tower Server " +
-                "With Max. Processor 1 x Intel Xeon E3 " +
-                "(Quad Core) E3-1225 v5\"(3.3 GHz " +
-                "/Cache 8 MB)... / STD MEMORY 8GB X 1/ MAX.");
-
-        ListAdapter requisitionFormTwoListView= new RequisitionFormTwoListView(getApplicationContext(),productNumber,productDate,productPrice,productDescription);
-        listView.setAdapter(requisitionFormTwoListView);
-
-
-
-
+        setContentView(R.layout.activity_requisition_form3);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -95,7 +56,7 @@ public class RequisitionForm2 extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.requisition_form2, menu);
+        getMenuInflater().inflate(R.menu.requisition_form3, menu);
         return true;
     }
 

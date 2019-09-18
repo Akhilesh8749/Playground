@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".RequisitionForm3"
+            android:label="@string/title_activity_requisition_form3"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".RequisitionForm2"
             android:label="@string/title_activity_requisition_form2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RequisitionForm1"
             android:label="@string/title_activity_requisition_form1"

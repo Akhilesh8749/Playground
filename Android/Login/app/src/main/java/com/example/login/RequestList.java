@@ -3,6 +3,8 @@ package com.example.login;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.login.Global.RequestStatus;
+import com.example.login.Model.RequestModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -38,70 +40,72 @@ public class RequestList extends AppCompatActivity {
     ListPopupWindow list1;
     TextView listpopup;
     ListView listView;
-    Button btn,reqForm2;
+    Button btn, reqForm2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_request_list);
-        String[] status={"Clear", "Approved", "Draft", "Awaiting", "Rejected"};
+        String[] status = {"Clear", "Approved", "Draft", "Awaiting", "Rejected"};
 
-        listView=findViewById(R.id.listVew);
-        btn=findViewById(R.id.button3);
-        reqForm2=findViewById(R.id.button4);
-
-
-
-        ArrayList<String> productNumber = new ArrayList<>();
-        ArrayList<String> productDate = new ArrayList<>();
-        ArrayList<String> productStatus = new ArrayList<>();
-
-        btn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent intent3= new Intent(getApplicationContext(),RequisitionForm1.class);
-            startActivity(intent3);
-        }
-        });
-
-        reqForm2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent requistionForm2=new Intent(getApplicationContext(),RequisitionForm2.class);
-                startActivity(requistionForm2);
-            }
-        });
+        listView = findViewById(R.id.listVew);
+        btn = findViewById(R.id.button3);
+        reqForm2 = findViewById(R.id.button4);
 
 
-        productNumber.add("PUR - 2019 - 056");
-        productNumber.add("PUR - 2019 - 057");
-        productNumber.add("PUR - 2019 - 058");
-        productNumber.add("PUR - 2019 - 059");
-        productNumber.add("PUR - 2019 - 060");
+        ArrayList<RequestModel> requestList = new ArrayList<>();
+        
+        RequestModel requestModel = new RequestModel();
 
-        productDate.add("06 Jul 2019");
-        productDate.add("06 Jul 2018");
-        productDate.add("06 Jul 2017");
-        productDate.add("06 Jul 2016");
-        productDate.add("06 Jul 20195");
+        requestModel.setRequestNumber("PUR - 2019 - 056");
+        requestModel.setRequestStatus(RequestStatus.APPROVED);
+        requestModel.setDate("06 Jul 2019");
+        requestList.add(requestModel);
+
+        requestModel = new RequestModel();
+
+        requestModel.setRequestNumber("PUR - 2019 - 057");
+        requestModel.setRequestStatus(RequestStatus.REJECTED);
+        requestModel.setDate("07 Jul 2019");
+        requestList.add(requestModel);
+
+        requestModel = new RequestModel();
+
+        requestModel.setRequestNumber("PUR - 2019 - 058");
+        requestModel.setRequestStatus(RequestStatus.DRAFT);
+        requestModel.setDate("08 Jul 2019");
+        requestList.add(requestModel);
+
+        requestModel = new RequestModel();
+
+        requestModel.setRequestNumber("PUR - 2019 - 059");
+        requestModel.setRequestStatus(RequestStatus.AWAITING_APPROVAL);
+        requestModel.setDate("09 Jul 2019");
+        requestList.add(requestModel);
+
+        requestModel = new RequestModel();
+
+        requestModel.setRequestNumber("PUR - 2019 - 060");
+        requestModel.setRequestStatus(RequestStatus.CLOSED);
+        requestModel.setDate("10 Jul 2019");
+        requestList.add(requestModel);
 
 
-
-        productStatus.add("AWAITING APPROVAL");
-        productStatus.add("APPROVED");
-        productStatus.add("DRAFT");
-        productStatus.add("REJECTED");
-        productStatus.add("STILL DOING");
-
-
-        ListAdapter listAdapter=new MyListAdapter(getApplicationContext(),productNumber,productDate,productStatus);
+        ListAdapter listAdapter = new MyListAdapter(getApplicationContext(),requestList);
         listView.setAdapter(listAdapter);
 
 
 
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent3 = new Intent(getApplicationContext(), RequisitionForm1.class);
+                startActivity(intent3);
+            }
+        });
 
-        img1=findViewById(R.id.imageView6);
-        listpopup= findViewById(R.id.listpopup);
+        img1 = findViewById(R.id.imageView6);
+        listpopup = findViewById(R.id.listpopup);
         list1 = new ListPopupWindow(getApplicationContext());
         list1.setAdapter(new ArrayAdapter(getApplicationContext(), R.layout.list, status));
         list1.setAnchorView(img1);

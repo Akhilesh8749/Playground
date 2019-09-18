@@ -1,5 +1,6 @@
 package com.example.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -26,12 +27,20 @@ public class RequisitionForm1 extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
 
-   //Button btn;
+   Button reqForm2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_requisition_form1);
 
+        reqForm2=findViewById(R.id.button4);
+        reqForm2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent requistionForm2=new Intent(getApplicationContext(),RequisitionForm2.class);
+                startActivity(requistionForm2);
+            }
+        });
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
