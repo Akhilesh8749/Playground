@@ -23,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -42,6 +43,9 @@ public class RequestList extends AppCompatActivity {
     ListView listView;
     Button btn, reqForm2;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,12 +57,12 @@ public class RequestList extends AppCompatActivity {
         reqForm2 = findViewById(R.id.button4);
 
 
-        ArrayList<RequestModel> requestList = new ArrayList<>();
-        
-        RequestModel requestModel = new RequestModel();
+         final ArrayList<RequestModel> requestList = new ArrayList<>();
+
+         RequestModel requestModel = new RequestModel();
 
         requestModel.setRequestNumber("PUR - 2019 - 056");
-        requestModel.setRequestStatus(RequestStatus.APPROVED);
+        requestModel.setRequestStatus(RequestStatus.AWAITING_APPROVAL);
         requestModel.setDate("06 Jul 2019");
         requestList.add(requestModel);
 
@@ -79,7 +83,7 @@ public class RequestList extends AppCompatActivity {
         requestModel = new RequestModel();
 
         requestModel.setRequestNumber("PUR - 2019 - 059");
-        requestModel.setRequestStatus(RequestStatus.AWAITING_APPROVAL);
+        requestModel.setRequestStatus(RequestStatus.APPROVED);
         requestModel.setDate("09 Jul 2019");
         requestList.add(requestModel);
 
@@ -91,10 +95,32 @@ public class RequestList extends AppCompatActivity {
         requestList.add(requestModel);
 
 
-        ListAdapter listAdapter = new MyListAdapter(getApplicationContext(),requestList);
+         ListAdapter listAdapter = new MyListAdapter(getApplicationContext(),requestList);
         listView.setAdapter(listAdapter);
 
 
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                RequestModel items= requestList.get(i);
+
+                Intent intent=new Intent(getApplicationContext(),RequestView.class);
+
+
+                Bundle dataBundle =new Bundle();
+
+                dataBundle.putString("RequestNumber", items.getRequestNumber());
+                dataBundle.putString("RequestDate", items.getDate());
+                dataBundle.putString("RequestStatus", items.getRequestStatus().toString());
+
+                intent.putExtra("request", dataBundle);
+
+                startActivity(intent);
+            }
+        });
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,6 +165,7 @@ public class RequestList extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
