@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 else{
-                    Intent intent1=new Intent(getApplicationContext(),RequestList.class);
+                    Intent intent1=new Intent(getApplicationContext(),FragmrntRequestList.class);
                     startActivity(intent1);
                 }
             }
