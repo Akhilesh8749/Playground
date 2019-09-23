@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="loadData" type="id" />
+    <item name="scrollDownVales" type="id" />
+
 </resources>
