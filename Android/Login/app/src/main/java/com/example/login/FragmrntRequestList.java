@@ -1,6 +1,6 @@
 package com.example.login;
 
-
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import com.example.login.Deligate.DeligeteInterface;
@@ -15,13 +15,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class FragmrntRequestList extends AppCompatActivity implements DeligeteInterface {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragmrnt_request_list);
-
 
         Request_List ReqList= new Request_List();
         ReqList.setDeligeteInterface(this);
@@ -35,11 +32,22 @@ public class FragmrntRequestList extends AppCompatActivity implements DeligeteIn
     @Override
     public void deligeteMethod(RequestModel requestModel) {
 
-        Fragment ReqView= new Request_View();
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.replace(R.id.fragmentLayout1,ReqView);
-        fragmentTransaction.commit();
+        int orientation = this.getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            Fragment ReqView= new Request_View();
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.replace(R.id.fragmentLayout,ReqView);
+            fragmentTransaction.commit();
+        }
+        else {
+            Fragment ReqView= new Request_View();
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.replace(R.id.fragmentLayout1,ReqView);
+            fragmentTransaction.commit();
+        }
     }
 }

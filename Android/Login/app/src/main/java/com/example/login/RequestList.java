@@ -60,48 +60,46 @@ public class RequestList extends AppCompatActivity {
          final ArrayList<RequestModel> requestList = new ArrayList<>();
 
          RequestModel requestModel = new RequestModel();
+         requestModel.setRequestNumber("PUR - 2019 - 056");
+         requestModel.setRequestStatus(RequestStatus.AWAITING_APPROVAL);
+         requestModel.setDate("06 Jul 2019");
+         requestList.add(requestModel);
 
-        requestModel.setRequestNumber("PUR - 2019 - 056");
-        requestModel.setRequestStatus(RequestStatus.AWAITING_APPROVAL);
-        requestModel.setDate("06 Jul 2019");
-        requestList.add(requestModel);
 
-        requestModel = new RequestModel();
+         requestModel = new RequestModel();
+         requestModel.setRequestNumber("PUR - 2019 - 057");
+         requestModel.setRequestStatus(RequestStatus.REJECTED);
+         requestModel.setDate("07 Jul 2019");
+         requestList.add(requestModel);
 
-        requestModel.setRequestNumber("PUR - 2019 - 057");
-        requestModel.setRequestStatus(RequestStatus.REJECTED);
-        requestModel.setDate("07 Jul 2019");
-        requestList.add(requestModel);
 
-        requestModel = new RequestModel();
+         requestModel = new RequestModel();
+         requestModel.setRequestNumber("PUR - 2019 - 058");
+         requestModel.setRequestStatus(RequestStatus.DRAFT);
+         requestModel.setDate("08 Jul 2019");
+         requestList.add(requestModel);
 
-        requestModel.setRequestNumber("PUR - 2019 - 058");
-        requestModel.setRequestStatus(RequestStatus.DRAFT);
-        requestModel.setDate("08 Jul 2019");
-        requestList.add(requestModel);
 
-        requestModel = new RequestModel();
+         requestModel = new RequestModel();
+         requestModel.setRequestNumber("PUR - 2019 - 059");
+         requestModel.setRequestStatus(RequestStatus.APPROVED);
+         requestModel.setDate("09 Jul 2019");
+         requestList.add(requestModel);
 
-        requestModel.setRequestNumber("PUR - 2019 - 059");
-        requestModel.setRequestStatus(RequestStatus.APPROVED);
-        requestModel.setDate("09 Jul 2019");
-        requestList.add(requestModel);
 
-        requestModel = new RequestModel();
-
-        requestModel.setRequestNumber("PUR - 2019 - 060");
-        requestModel.setRequestStatus(RequestStatus.CLOSED);
-        requestModel.setDate("10 Jul 2019");
-        requestList.add(requestModel);
+         requestModel = new RequestModel();
+         requestModel.setRequestNumber("PUR - 2019 - 060");
+         requestModel.setRequestStatus(RequestStatus.CLOSED);
+         requestModel.setDate("10 Jul 2019");
+         requestList.add(requestModel);
 
 
          ListAdapter listAdapter = new MyListAdapter(getApplicationContext(),requestList);
-        listView.setAdapter(listAdapter);
+         listView.setAdapter(listAdapter);
 
 
 
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
@@ -120,28 +118,30 @@ public class RequestList extends AppCompatActivity {
 
                 startActivity(intent);
             }
-        });
+         });
 
-        btn.setOnClickListener(new View.OnClickListener() {
+
+         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent3 = new Intent(getApplicationContext(), RequisitionForm1.class);
                 startActivity(intent3);
             }
-        });
+         });
 
-        img1 = findViewById(R.id.imageView6);
-        listpopup = findViewById(R.id.listpopup);
-        list1 = new ListPopupWindow(getApplicationContext());
-        list1.setAdapter(new ArrayAdapter(getApplicationContext(), R.layout.list, status));
-        list1.setAnchorView(img1);
-        list1.setModal(true);
-        img1.setOnClickListener(new View.OnClickListener() {
+
+         img1 = findViewById(R.id.imageView6);
+         listpopup = findViewById(R.id.listpopup);
+         list1 = new ListPopupWindow(getApplicationContext());
+         list1.setAdapter(new ArrayAdapter(getApplicationContext(), R.layout.list, status));
+         list1.setAnchorView(img1);
+         list1.setModal(true);
+         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 list1.show();
             }
-        });
+         });
 
 
 
