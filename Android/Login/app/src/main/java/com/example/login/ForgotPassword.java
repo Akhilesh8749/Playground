@@ -8,8 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
+
 
 import static com.example.login.R.layout.alertdialog;
 
@@ -44,9 +43,7 @@ public class ForgotPassword extends AppCompatActivity {
                     final AlertDialog alertDialog=alertBuilder.create();
                     alertDialog.show();
                 }
-
             }
         });
-
     }
 }

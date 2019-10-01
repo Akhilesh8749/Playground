@@ -18,13 +18,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.login.Deligate.DeligeteInterface;
+import com.example.login.Deligate.PassingData;
 import com.example.login.Global.RequestStatus;
 import com.example.login.Model.RequestModel;
 
 import java.util.ArrayList;
 
 
-public class Request_List extends Fragment {
+public class Request_List extends Fragment  {
 
     ListView listView;
     DeligeteInterface delInterface;

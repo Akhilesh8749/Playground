@@ -28,6 +28,27 @@ public class FragmrntRequestList extends AppCompatActivity implements DeligeteIn
         fragmentTransaction.commit();
     }
 
+@Override
+public void onConfigurationChanged(Configuration newConfiguration){
+    super.onConfigurationChanged(newConfiguration);
+    if(newConfiguration.orientation==Configuration.ORIENTATION_PORTRAIT){
+        Fragment ReqView= new Request_View();
+        FragmentManager fragmentManager=getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.replace(R.id.fragmentLayout,ReqView);
+        fragmentTransaction.commit();
+
+    }
+    else {
+        Fragment ReqView = new Request_View();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.replace(R.id.fragmentLayout1, ReqView);
+        fragmentTransaction.commit();
+    }
+}
 
     @Override
     public void deligeteMethod(RequestModel requestModel) {
@@ -40,6 +61,8 @@ public class FragmrntRequestList extends AppCompatActivity implements DeligeteIn
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.replace(R.id.fragmentLayout,ReqView);
             fragmentTransaction.commit();
+
+            ((Request_View) ReqView).setData(requestModel);
         }
         else {
             Fragment ReqView= new Request_View();
@@ -48,6 +71,8 @@ public class FragmrntRequestList extends AppCompatActivity implements DeligeteIn
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.replace(R.id.fragmentLayout1,ReqView);
             fragmentTransaction.commit();
+
+            ((Request_View) ReqView).setData(requestModel);
         }
     }
 }

@@ -1,6 +1,6 @@
 package com.example.login;
 
-import android.content.Intent;
+
 import android.os.Bundle;
 
 import com.example.login.Model.ReqViewModel;
@@ -24,7 +24,6 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.ArrayList;

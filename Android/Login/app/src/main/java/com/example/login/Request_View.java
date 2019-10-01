@@ -12,13 +12,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.login.Model.ReqViewModel;
+import com.example.login.Model.RequestModel;
 
 import java.util.ArrayList;
 
 
 public class Request_View extends Fragment {
-    TextView RQNumber,RQDate,RQStatus;
+    TextView RQTitle,RQDate,RQStatus;
     ListView listView;
+    RequestModel requestModel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,16 +33,17 @@ public class Request_View extends Fragment {
 //        String reqNo=reqBundle.getString("RequestNumber");
 //        String reqDate=reqBundle.getString("RequestDate");
 //        String reqStatus=reqBundle.getString("RequestStatus");
-//
-//        RQNumber=view.findViewById(R.id.textView35);
-//        RQNumber.setText(reqNo);
-//
-//
-//        RQDate=view.findViewById(R.id.textView42);
-//        RQDate.setText(reqDate);
-//
-//        RQStatus=view.findViewById(R.id.textView44);
-//        RQStatus.setText(reqStatus);
+
+        RQTitle=view.findViewById(R.id.textView35);
+        RQDate=view.findViewById(R.id.textView42);
+        RQStatus=view.findViewById(R.id.textView44);
+
+
+        if(requestModel !=null){
+            RQTitle.setText(requestModel.getRequestNumber());
+            RQDate.setText(requestModel.getDate());
+            RQStatus.setText(requestModel.getRequestStatus().toString());
+        }
 
 
 
@@ -87,5 +90,9 @@ public class Request_View extends Fragment {
         listView.setAdapter(itemInformation);
 
        return view;
+    }
+
+    public  void setData(RequestModel requestModel){
+        this.requestModel=requestModel;
     }
 }
