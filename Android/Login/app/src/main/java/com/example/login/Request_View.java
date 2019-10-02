@@ -28,16 +28,9 @@ public class Request_View extends Fragment {
         // Inflate the layout for this fragment
        View view= inflater.inflate(R.layout.fragment_request__view, container, false);
 
-
-//        Bundle reqBundle=view.getIntent().getBundleExtra("request");
-//        String reqNo=reqBundle.getString("RequestNumber");
-//        String reqDate=reqBundle.getString("RequestDate");
-//        String reqStatus=reqBundle.getString("RequestStatus");
-
         RQTitle=view.findViewById(R.id.textView35);
         RQDate=view.findViewById(R.id.textView42);
         RQStatus=view.findViewById(R.id.textView44);
-
 
         if(requestModel !=null){
             RQTitle.setText(requestModel.getRequestNumber());
@@ -46,10 +39,7 @@ public class Request_View extends Fragment {
         }
 
 
-
         listView=view.findViewById(R.id.scrollDownVales);
-
-
 
         ArrayList<ReqViewModel> reqViewList = new ArrayList<>();
 
@@ -82,8 +72,6 @@ public class Request_View extends Fragment {
         reqViewModel.setItemDate("10 Jul 2019");
         reqViewModel.setItemPrice("45000");
         reqViewList.add(reqViewModel);
-
-
 
 
         ListAdapter itemInformation= new MyScrollViev(getContext(),reqViewList);
