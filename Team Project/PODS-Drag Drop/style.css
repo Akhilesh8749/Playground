@@ -1,0 +1,15 @@
+#canvas {
+    border: 2px solid red;
+    background: rgb(233, 229, 229);
+    padding: 10px;
+}
+#background {
+    display: none;
+}
+#pod {
+    position: absolute;
+    top: 5%;
+    left: 43%;
+    cursor: move;
+    opacity: 0.6;
+}
