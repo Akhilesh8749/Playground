@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
@@ -9,15 +10,72 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="styleJS.js"></script>
 </head>
+
 <body>
-<form>
-<canvas id="canvas" width="650" height="550"></canvas>
+    <form>
+        <canvas id="canvas" width="500" height="500"></canvas>
 
-<img src="floor1.png" id="background"/>
-<img src="pod.png" id="pod" />
+        <img src="floor1.png" id="background" />
 
-<button id="draw">Save</button>
-<button id="reset">Reset</button>
-</form>
+        <!-- style="visibility: hidden"> -->
+
+        <div class="dropdown">
+            <img src="menu.png" id="menu" width="30" onclick="myFunction()" class="dropbtn" />
+            <div id="myDropdown" class="dropdown-content">
+                <!-- <div id="addPOD" onclick="show_image('pod.png', 'pod','POD icon');">Add POD</div> -->
+                <div id="addPOD" onclick="showImage()">Add POD</div>
+                <div id="">About</div>
+                <div id="">Contact</div>
+            </div>
+        </div>
+
+
+        <img id="podID" src="pod.png" alt="The Scream" style="visibility: hidden">
+
+
+        <button id="draw">Save</button>
+        <button id="reset">Reset</button>
+        <p>X=<label id="valueX"></label></p>
+        <p>Y=<label id="valueY"></label></p>
+    </form>
+
+
+
+
+    <script>
+        //    function show_image(src, id, alt) {
+        //     var img = document.createElement("img");
+        //     img.src = src;
+        //     img.id = id;
+        //     img.alt = alt;
+
+        //     // This next line will just add it to the <body> tag
+        //     document.body.appendChild(img);
+        // }
+
+        function showImage() {
+            document.getElementById("podID").style.visibility = "visible";
+            document.getElementById("draw").disabled = false;
+        }
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
+
 </html>

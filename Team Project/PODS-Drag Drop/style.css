@@ -2,14 +2,46 @@
     border: 2px solid red;
     background: rgb(233, 229, 229);
     padding: 10px;
+    position: relative;
 }
 #background {
     display: none;
 }
-#pod {
+#menu {
     position: absolute;
     top: 5%;
-    left: 43%;
+    left: 35%;
+   
+}
+#podID {
+    position: absolute;
+    top: 30%;
+    left: 15%;
     cursor: move;
     opacity: 0.6;
 }
+.dropbtn {
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    overflow: auto;
+}
+  
+.dropdown-content div {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+  
+.show {display: block;}
