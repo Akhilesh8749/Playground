@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <style>
+        canvas {
+            max-width: 600px;
+            border: 1px solid black;
+        }
+
+        #pod{
+            opacity: 0.1;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="imageCanvas" width="500px" height="500px"></canvas>
+    <button id="btn" onclick="paint()">Add Pod</button>
+    <p>X=<label id="valueX"></label></p>
+    <p>Y=<label id="valueY"></label></p>
+    <script>
+        var pressed = false;
+
+        var mousex = 0, mousey = 0;
+        function pressMous() {
+            pressed = true;
+
+        }
+
+        var prevX = 0, prevY = 0;
+        function movemouse(evt) {
+            var rect = canvas.getBoundingClientRect();
+            if (pressed) {
+
+                mousex = evt.clientX - rect.left;
+                mousey = evt.clientY - rect.top;
+                updateImagen();
+            }
+        }
+        function upmouse() {
+            pressed = false;
+            // console.log("mousex " + mousex + " mousey " + mousey);
+            document.getElementById("valueX").innerHTML = mousex;
+            document.getElementById("valueY").innerHTML = mousey;
+        }
+
+        var ima;
+        var radianes = Math.PI / 180;
+
+        var image = new Image();
+        var canvas = document.getElementById('imageCanvas');
+        var ctx = canvas.getContext('2d');
+
+
+        var image1 = new Image();
+        image1.src = 'floor1.png';
+        draw(ctx, image1);
+        function draw(cxt, image1) {
+
+            if (!image1.complete) {
+                setTimeout(function () {
+                    draw(cxt, image1);
+                }, 50);
+                return;
+            }
+            cxt.drawImage(image1, 0, 0, canvas.width, canvas.height);
+        }
+
+
+        canvas.addEventListener('mousedown', pressMous, false);
+        canvas.addEventListener('mousemove', movemouse, false);
+        canvas.addEventListener('mouseup', upmouse, false);
+
+        // paint();
+        function paint() {
+            var ctx = canvas.getContext('2d');
+            var image = new Image();
+            image.src = 'pod.png';
+            image.width = '40'
+            image.height = '40'
+            image.id = 'pod'
+            drawPOD(ctx, image);
+            function drawPOD(cxt, image) {
+
+                if (!image.complete) {
+                    setTimeout(function () {
+                        draw(cxt, image);
+                    }, 50);
+                    return;
+                }
+                cxt.drawImage(image, 0, 0, 50, 50);
+            }
+        }
+
+        /*********/
+        var offsetX = canvas.offsetLeft;
+        var offsetY = canvas.offsetTop;
+        /*****************/
+
+        // paint();
+        function updateImagen() {
+
+            ctx.save();
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.drawImage(image, mousex, mousey, image.width, image.height);
+            // console.log("mousex " + mousex + " mousey " + mousey);
+            ctx.restore();
+        }
+
+        // function paint() {
+        //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+        //     image.src = 'pod.png';
+        //     image.onclick = function () {
+        //         var cxt = canvas.getContext('2d');
+        //         cxt.drawImage(image, 10, 10);
+        //     }
+
+        // }
+
+    </script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <style>
+        #cvs {
+            border: 1px solid red;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="cvs" width="500" height="500"></canvas>
+    <script>
+        var canvas = document.getElementById('cvs');
+        canvas.width = canvas.scrollWidth;
+        canvas.height = canvas.scrollHeight;
+
+        var cxt = canvas.getContext('2d');
+
+        function draw(cxt, image) {
+
+            if (!image.complete) {
+                setTimeout(function(){
+                    draw(cxt, image); 
+                }, 50);
+                return;
+
+            }
+            cxt.drawImage(image, 0, 0, canvas.width, canvas.height);
+        }
+
+        var image = new Image();
+
+        image.src = 'floor1.png';
+        draw(cxt, image);
+
+        var menuImage= new Image();
+    </script>
+</body>
+
+</html> -->
